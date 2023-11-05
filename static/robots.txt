@@ -1,0 +1,6 @@
+# for now, i don't want anything indexed, thx
+User-agent: *
+Disallow: /
+# but especially no images
+User-agent: Googlebot-Image
+Disallow: /
