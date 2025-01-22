@@ -1,6 +1,11 @@
-# for now, i don't want anything indexed, thx
 User-agent: *
-Disallow: /
-# but especially no images
+Disallow: /images/
+Disallow: /contact/
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
+Disallow: /*.png$
+Disallow: /*.svg$
 User-agent: Googlebot-Image
+Disallow: /
+User-agent: ia_archiver
 Disallow: /

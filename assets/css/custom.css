@@ -1,0 +1,43 @@
+.avatar img {
+    width: 44rem;
+}
+img:hover {
+    filter: grayscale(10%);
+    -webkit-filter: grayscale(10%);
+    -moz-filter: grayscale(10%);
+    filter: grayscale(10%);
+    filter: gray;
+    -webkit-filter: grayscale(0.1));
+}
+img {
+    object-fit: cover;
+    transition: all 3s ease;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+    -webkit-filter: grayscale(1));
+}
+.content {
+    margin-top: -2em;
+}
+.content header {
+    margin-top: 0;
+    display: none;
+}
+.img-tiny img {
+    width: 1em;
+    margin-right: 0.5em;
+    display: inline;
+    filter: unset;
+}
+.external-link {
+	text-decoration: underline;
+	color: #000000;
+}
+body.colorscheme-dark a {
+	color: #ffffff;
+}
+body.colorscheme-dark .img-tiny {
+	filter: invert(100%);
+}
