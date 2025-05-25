@@ -7,30 +7,25 @@ disableKinds = ["section", "taxonomy", "term", "RSS", "robotsTXT"]
 defaultContentLanguage = "de"
 languagecode = "de"
 disableHugoGeneratorInject = "true"
+sectionPagesMenu = 'main'
 
 theme = "hugo-coder"
-
 title = "Moritz Bartl"
 
 [params]
- info = "Innenreisebegleitungen"
- description = "Moritz Bartl. Innenreisebegleitungen."
- favicon_32 = "images/favicon.png"
- favicon_16 = "images/favicon.png"
+info = "Innenreisebegleitungen"
+description = "Moritz Bartl. Innenreisebegleitungen."
+favicon_32 = "images/favicon.png"
+favicon_16 = "images/favicon.png"
 
- avatarURL = "images/moritz-v2.jpg"
- customCSS = ["css/custom.css"]
+avatarURL = "images/moritz-v2.avif"
+customCSS = ["css/custom.css"]
+customJS = ["js/custom.js"]
 
- author = "Moritz Bartl"
+author = "Moritz Bartl"
 
- colorScheme = "auto"
- hideColorSchemeToggle = "true"
+colorScheme = "auto"
+hideColorSchemeToggle = "true"
 
- [params.meta]
-  keywords = ""
-
-[[menu.main]]
-    name ="Kontakt"
-    weight = "1"
-    url = "contact/"
-
+[params.meta]
+keywords = ""

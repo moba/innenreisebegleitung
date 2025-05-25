@@ -1,17 +1,18 @@
 .avatar img {
     width: 44rem;
 }
-img:hover {
+img.colored, img:hover {
     filter: grayscale(10%);
     -webkit-filter: grayscale(10%);
     -moz-filter: grayscale(10%);
+    transition: all 3s ease;
     filter: grayscale(10%);
     filter: gray;
     -webkit-filter: grayscale(0.1));
 }
 img {
     object-fit: cover;
-    transition: all 3s ease;
+    transition: all 30s ease;
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);

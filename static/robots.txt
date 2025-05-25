@@ -1,6 +1,7 @@
 User-agent: *
 Disallow: /images/
 Disallow: /contact/
+Disallow: /kontakt/
 Disallow: /*.jpg$
 Disallow: /*.jpeg$
 Disallow: /*.png$
