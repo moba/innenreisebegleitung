@@ -42,3 +42,9 @@ body.colorscheme-dark a {
 body.colorscheme-dark .img-tiny {
 	filter: invert(100%);
 }
+h1 { font-size: calc(2em * 0.6); }
+h2 { font-size: calc(1.5em * 0.6); }
+h3 { font-size: calc(1.17em * 0.6); }
+h4 { font-size: calc(1em * 0.6); }
+h5 { font-size: calc(0.83em * 0.6); }
+h6 { font-size: calc(0.67em * 0.6); }
