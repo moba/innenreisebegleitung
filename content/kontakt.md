@@ -1,12 +1,13 @@
 ---
 title: "Kontakt"
 slug: "kontakt"
+images: ["images/social/wilde-kerle.jpg"]
 menus:
  main:
   weight: 100
 ---
 
-![](/images/wo-die-wilden-kerle-wohnen.avif)
+![](/images/wo-die-wilden-kerle-wohnen.jpg)
 
 ![](/images/phone.svg "img-tiny") Telefon: {{< tel number="+498920007262" >}}089 / 2000 - 7262{{</ tel >}}
 
@@ -17,3 +18,5 @@ menus:
 ![](/images/linkedin.svg "img-tiny") LinkedIn: [moritzbartl](https://www.linkedin.com/in/moritzbartl/)
 
 ![](/images/envelope.svg "img-tiny") Post: Postfach 81 02 43, 81902 München
+
+> „Ein guter Therapeut wird aussehen wie ein Jungianer, ein Freudianer, ein Tänzer, ein Geschichtenerzähler, ein Schamane, ein Analytiker, ein Lehrer oder ein Idiot, je nach Situation.“ -- Arnold Mindell

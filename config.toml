@@ -18,11 +18,16 @@ description = "Moritz Bartl. Innenreisebegleitungen."
 favicon_32 = "images/favicon.png"
 favicon_16 = "images/favicon.png"
 
-avatarURL = "images/moritz-v2.avif"
+avatarURL = "images/moritz-v2.jpg"
 customCSS = ["css/custom.css"]
 customJS = ["js/custom.js"]
 
 author = "Moritz Bartl"
+
+# Vorschaubild beim Teilen in sozialen Medien (Startseite und alle Seiten ohne
+# eigenen `images`-Eintrag im Front Matter). 1200x630, zugeschnitten aus
+# static/images/seamless-rim-border-...-772282585.jpg
+images = ["images/social/blumen.jpg"]
 
 colorScheme = "auto"
 hideColorSchemeToggle = "true"

@@ -1,66 +1,72 @@
 ---
 title: "Erfahrungen"
 slug: "erfahrungen"
-draft: true
+draft: false
+images: ["images/social/blumen.jpg"]
 menus:
  main:
 #  name: "Erfahrungen"
   weight: 20
 ---
 
-{{% comment %}} ![](/images/AdobeStock_209878435-scaled.jpeg)  {{% /comment %}}
-
 ![](/images/seamless-rim-border-with-medicinal-herbs-flowering-wildflowers-leaves-and-bees-botanical-772282585.jpg)
 
-# Selbsterfahrungen und Fortbildungen
+ * seit 2025 in Ausbildung in Craniosakraler Biodynamik und Heilsamer Präsenz (Konrad Alverdes, Bielefeld)
+ * seit 2025 in Weiterbildung Verarbeitung pränataler Erfahrungen nach Franz Renggli (Joachim Detjen, Gaby Moser, Michaela Groer)
+ 
+ --- 
+ 
+ * Weiterbildung in Identitätsorientierter Traumatheorie und regelmäßige Teilnahme an Update-Seminaren und IoPT-Selbsterfahrungsworkshops (Franz Ruppert, München)
+ * Coaching-Ausbildung auf Basis Gewaltfreier Kommunikation (Andi Schmidbauer, Akademie Blickwinkel, München)
+ * Ausbildung in Prozess- und Embodimentfokussierter Psychotherapie PEP® (Michael Bohne, Wien)
+ * Ausbildung Integrale Gesprächstherapie, Focusing nach Gendlin, Coaching – Basis (Peter Helmer, IGF München)
+ * Vorstand [Traum und Verantwortung e.V.](https://www.traum-und-verantwortung.de/) und [Stiftung Erneuerbare Freiheit](https://www.erneuerbare-freiheit.de/)
+ 
+ --- 
+ 
+ # Selbsterfahrungen und Seminare
 (eine Auswahl)
 
-## 2025
- * seit 2025: Ausbildung in Craniosakraler Biodynamik in Heilsamer Präsenz (K. Alverdes, Bielefeld)
- * Gestalttherapeutisches Seminar: Family Circles (Institut für Gestalt und Erfahrung)
- * Ausbildung Integrale Gesprächstherapie, Focusing & Coaching – Basis (P. Helmer, IGF München)
- * Unterbrochene Hinbewegung (R. Pertler, München)
- * Der Embryo in uns (J. van der Wal, Freiburg)
- * Hypnosystemische Trauerbegleitung (R. Kachler, München)
- * Reden Reicht Nicht? - Tagung (u.a. K. Eidenschink, G. Schmidt, Würzburg)
-
-## 2024
- * MHFA Mental Health First Aid Ersthelfer-Kurs
- * Ausbildung in Identitätsorientierter Traumatheorie (F. Ruppert, München)
- * Ausbildung in Prozess- und Embodimentfokussierter Psychotherapie (M. Bohne, Wien)
- * Traumainformierte Gewaltfreie Kommunikation - Theorie und Praxis (A. Scheuringer, L. Hammerschmied, St. Florian)
- * CNVC International Intensive Training in Nonviolent Communication (Dänemark)
- * Hypnosystemische Trauerbegleitung (R. Kachler, Nürnberg)
- * Befreiung von Scham und Schuld mit dem NARM-Ansatz (A. Doerne, Blumenthal)
- * DGPPN Kongress (Berlin)
-
-## 2023
- * Gestalttherapeutisches Seminar: Der Schatten (IrgendwieAnders)
- * Dämonenfütterung (L. Svensson, München)
- * Craniosakrale Behandlungen (R. Kohler, München)
- * Hypnotherapie nach Yager (F. Groenesteyn, München)
- * Familienaufstellungen (J. Beyersdorff, München)
- * Strukturaufstellungen (Constellaris, München)
- * Coaching-Ausbildung auf Basis Gewaltfreier Kommunikation (Akademie Blickwinkel, München)
- * Restorative Circles Workshop (H. Hartenberg, München)
- * Holotropes Atmen (Institut für Gestalt und Erfahrung)
- * seit 2023: Arbeiten mit EMDR (M. Wegner, München)
-
-## 2022
+ * Visionary Craniosacral Work 1 (Hugh Milne, Graz)
  * Lomi Lomi Hawaiianische Massage Basisausbildung (Lomi Akademie Berlin)
- * Gestalttherapeutisches Seminar: Heldenreise (IrgendwieAnders)
- * Systemische Selbst-Integration / Systemische Aufstellungen (E. Langlotz, München)
- * Strukturaufstellungen (Constellaris, München)
-
-## 2021
- * INSIGHT Psychedelic Research Conference (MIND Foundation, Charité Berlin)
- * seit 2021: Selbstbegegnungen nach der Identitätsorientierten Psychotraumatheorie (Berlin/München/Leipzig)
-
-## 2020
+ * Craniosakrale Behandlungen (R. Kohler, München)
  * Somatic Experiencing (Dr. Sternberg, Traumatherapie Institut Berlin)
  * Craniosakrale Traumaarbeit (D. Kliesch, Berlin)
-
-## 2018
  * Akupunktur für Körper, Psyche und Trauma (J. Schottdorf, Augsburg)
+ 
+ <!-- separator --> 
+ * Integration Lab: Kollektives und Transgenerationales Trauma unserer Beziehungsarchitektur (Pocket Project, online)
+ * Womb Surround Workshop nach Ray Castellino (B. Ravanelli, Rosenheim)
+ * Von Anfang an verbunden – Die Kraft der vorgeburtlichen Beziehung (Bindungsanalyse-Tagung 2025, Würzburg)
+ * Aufstellungen rund um den Zeugungsmoment (C. Lieben, Wien)
+ * Frühe Verbindung: Körpertherapie mit Babys (R. Verdult)
+ * Einblick in unsere prä- und perinatalen Prägungsräume (K. Terry)
+ * Einführungsworkshop Emotionelle Erste Hilfe und Eltern-Baby-Therapie (T. Harms)
+ * Reise in die Geburt (I. Oberscheid, München)
+ * Der Embryo in uns (J. van der Wal, Freiburg)
+ * Unterbrochene Hinbewegung, holotropes Atmen (R. Pertler, München)
+ * Mehrlingsarbeit nach der Methode Freni (G. Freni)
+ * Gestalttherapeutische Seminare: Family Circles, Der Schatten, Heldenreise (IrgendwieAnders, IGE)
+ 
+ <!-- separator --> 
+ * Traumainformierte Gewaltfreie Kommunikation - Theorie und Praxis (A. Scheuringer, L. Hammerschmied, St. Florian)
+ * CNVC International Intensive Training in Nonviolent Communication (Dänemark)
+ * Restorative Circles Workshop (H. Hartenberg, München)
+ * Hypnosystemische Trauerbegleitung (R. Kachler, Nürnberg/München)
+ * Ausbildung zum MHFA Mental Health First Aid Ersthelfer
+ * Befreiung von Scham und Schuld mit dem NARM-Ansatz (A. Doerne, Blumenthal)
+ * Reden Reicht Nicht? - Tagung 2025 (u.a. K. Eidenschink, G. Schmidt, Würzburg)
+ * DGPPN Kongress 2024 (Berlin)
+ * INSIGHT Psychedelic Research Conference 2021 (MIND Foundation, Charité Berlin) 
+ 
+ <!-- separator --> 
+ * Systemische Rituale (D. Kampenhout, Wien/Köln)
+ * Systemische Selbst-Integration / Systemische Aufstellungen (E. Langlotz, München)
+ * Strukturaufstellungen (SysT, Sparrer & von Kibéd, München)
+ * Familienaufstellungen (Constellaris, J. Beyersdorff, München)
+ * Dämonenfütterung (L. Svensson, München)
+ * Hypnotherapie nach Yager (F. Groenesteyn, München)
+ * Holotropes Atmen (Institut für Gestalt und Erfahrung)
+ * Arbeiten mit EMDR (M. Wegner, München)
 
 ![](/images/seamless-rim-border-with-medicinal-herbs-flowering-wildflowers-leaves-and-bees-botanical-772282585.jpg)
