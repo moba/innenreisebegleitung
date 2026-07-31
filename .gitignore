@@ -1,1 +1,5 @@
 public/
+
+# Lizenzierte Bildoriginale in voller Auflösung (Quelle für die optimierten
+# Fassungen unter static/images/) -- zu groß fürs Repo, lokal aufbewahren
+originals/
