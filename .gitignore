@@ -16,3 +16,9 @@ resources/_gen/
 # Interne Planungsnotizen (superpowers). Gehören nicht in ein öffentliches
 # Repository und werden von den Werkzeugen sonst wieder angelegt.
 docs/
+
+# Lokal vorzuhaltende Bilddateien, nicht versioniert.
+assets/images/seamless-rim-border-with-medicinal-herbs-flowering-wildflowers-leaves-and-bees-botanical-772282585.jpg
+assets/images/wo-die-wilden-kerle-wohnen.jpg
+static/images/social/blumen.jpg
+static/images/social/wilde-kerle.jpg
