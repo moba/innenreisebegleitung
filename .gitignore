@@ -12,3 +12,7 @@ resources/_gen/
 
 .DS_Store
 .hugo_build.lock
+
+# Interne Planungsnotizen (superpowers). Gehören nicht in ein öffentliches
+# Repository und werden von den Werkzeugen sonst wieder angelegt.
+docs/
