@@ -109,7 +109,7 @@
 {{- $images := .Params.images | default .Site.Params.images -}}
 {{- $image := "" -}}
 {{- with $images }}{{ $image = index . 0 | absURL }}{{ end -}}
-{{- $locale := .Site.Language.LanguageCode | default .Site.Language.Lang | replaceRE "-" "_" -}}
+{{- $locale :=  .Site.Language.Locale | default .Site.Language.Lang | replaceRE "-" "_" -}}
 
 <meta name="twitter:card" content="{{ if $image }}summary_large_image{{ else }}summary{{ end }}">
 {{ with $image }}<meta name="twitter:image" content="{{ . }}">
@@ -123,5 +123,5 @@
 <meta property="og:locale" content="{{ $locale }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 {{ with $image }}<meta property="og:image" content="{{ . }}">
-{{ end }}{{ range .Translations }}<meta property="og:locale:alternate" content="{{ .Site.Language.LanguageCode | default .Site.Language.Lang | replaceRE "-" "_" }}">
+{{ end }}{{ range .Translations }}<meta property="og:locale:alternate" content="{{  .Site.Language.Locale | default .Site.Language.Lang | replaceRE "-" "_" }}">
 {{ end }}
