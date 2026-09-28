@@ -108,7 +108,16 @@
      Sprache. */}}
 {{- $images := .Params.images | default .Site.Params.images -}}
 {{- $image := "" -}}
-{{- with $images }}{{ $image = index . 0 | absURL }}{{ end -}}
+{{- $imageRes := false -}}
+{{- with $images -}}
+  {{- $path := index . 0 -}}
+  {{- $image = $path | absURL -}}
+  {{/* Abmessungen aus der Datei statt fest eingetragen: static/ ist nach
+       assets/ eingehängt (siehe module.mounts in config/_default/hugo.toml),
+       resources.Get findet das Bild also unter demselben Pfad, der im
+       Parameter steht. */}}
+  {{- $imageRes = resources.Get $path -}}
+{{- end -}}
 {{- $locale :=  .Site.Language.Locale | default .Site.Language.Lang | replaceRE "-" "_" -}}
 
 <meta name="twitter:card" content="{{ if $image }}summary_large_image{{ else }}summary{{ end }}">
@@ -123,5 +132,15 @@
 <meta property="og:locale" content="{{ $locale }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 {{ with $image }}<meta property="og:image" content="{{ . }}">
-{{ end }}{{ range .Translations }}<meta property="og:locale:alternate" content="{{  .Site.Language.Locale | default .Site.Language.Lang | replaceRE "-" "_" }}">
+{{ end }}{{/* og:image:width und -height sind nicht schmückendes Beiwerk:
+     LinkedIn entscheidet an ihnen, ob es die große Vorschaukarte baut oder
+     die kleine mit Briefmarke daneben, und zwar bevor es das Bild geladen
+     hat. Fehlen sie, fällt es auf die kleine Fassung zurück -- im Post
+     Inspector als "articleshare-shrink_160" zu sehen. */}}
+{{- with $imageRes }}{{ if eq .ResourceType "image" }}
+<meta property="og:image:type" content="{{ .MediaType.Type }}">
+<meta property="og:image:width" content="{{ .Width }}">
+<meta property="og:image:height" content="{{ .Height }}">
+{{ end }}{{ end }}
+{{ range .Translations }}<meta property="og:locale:alternate" content="{{  .Site.Language.Locale | default .Site.Language.Lang | replaceRE "-" "_" }}">
 {{ end }}
