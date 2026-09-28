@@ -75,4 +75,4 @@ menus:
 
 ---
 
-![](/images/mo-5jahre.jpg)
+![](/images/moritz-5jahre.jpg)
