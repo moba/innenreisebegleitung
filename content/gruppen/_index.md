@@ -17,7 +17,7 @@ Was allein schwer zu üben ist, geht zu mehreren leichter. Und manches lässt si
 
 **[Berührungen in Stille]({{< ref "gruppen/beruehrungen-in-stille.md" >}})** – ein ganzer Tag, abwechselnd zu zweit. Einer liegt, der andere legt die Hände auf und tut sonst nichts. Dazwischen Stille, lange Pausen und ein Kreis, in dem erzählt wird, wie es war. Nach Mike Boxhall.
 
-**[Freie Aufstellungen]({{< ref "gruppen/freie-aufstellungen.md" >}})** – ein Abend zum Ausprobieren. Das Anliegen formuliert allein, wer aufstellt; von außen kommt so wenig wie möglich. Für Menschen, die selbst aufstellen, und für alle, die das Format noch nicht kennen.
+**[Freie Aufstellungen]({{< ref "gruppen/freie-aufstellungen.md" >}})** – Das Anliegen formuliert allein, wer aufstellt; von außen kommt so wenig wie möglich. Für Menschen, die selbst aufstellen, und für alle, die das Format noch nicht kennen.
 
 Beide beginnen, sobald sich genug Menschen gefunden haben. Termine legen wir dann gemeinsam fest.
 

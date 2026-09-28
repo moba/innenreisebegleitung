@@ -24,7 +24,7 @@ What is hard to practise alone goes more easily with others. And some things can
 
 **[Touches in Stillness]({{< ref "gruppen/beruehrungen-in-stille.md" >}})** – a whole day, in pairs and taking turns. One person lies down, the other rests their hands on them and does nothing else. In between: silence, long breaks, and a circle in which we say how it was. After Mike Boxhall.
 
-**[Free-Form Constellations]({{< ref "gruppen/freie-aufstellungen.md" >}})** – an evening for trying things out. The intention is formulated by the person bringing it, and as little as possible comes from outside. For people who facilitate constellations themselves, and for anyone who does not yet know the format.
+**[Free-Form Constellations]({{< ref "gruppen/freie-aufstellungen.md" >}})** – The intention is formulated by the person bringing it, and as little as possible comes from outside. For people who facilitate constellations themselves, and for anyone who does not yet know the format and is curious to explore.
 
 Both begin as soon as enough people have found each other. We then set the dates together.
 
