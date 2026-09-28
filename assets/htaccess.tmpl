@@ -97,8 +97,9 @@ Header set X-Robots-Tag "noimageindex"
 	Header set X-Robots-Tag "noindex, noarchive, nosnippet"
 </FilesMatch>
 
-# Die beiden Kontaktseiten gehören nicht in den Suchindex. <FilesMatch> hilft
-# hier nicht: die Adressen sind Verzeichnisse und landen alle auf index.html.
+# Kontakt- und Datenschutzseiten gehören nicht in den Suchindex.
+# <FilesMatch> hilft hier nicht: die Adressen sind Verzeichnisse und landen
+# alle auf index.html.
 # Deshalb über eine Umgebungsvariable am Request-Pfad. `always`, damit der
 # Header auch an der 301 von /contact/ hängt.
 #
@@ -118,8 +119,9 @@ Header set X-Robots-Tag "noimageindex"
 # Aus dem Sitemap sind die gesperrten Seiten dagegen heraus (sitemap.disable
 # im Front Matter von kontakt.md, kontakt.en.md, datenschutz.md,
 # datenschutz.en.md): eine Adresse einzureichen und gleichzeitig das Abrufen
-# zu verbieten, meldet die Search Console zu Recht.
-SetEnvIf Request_URI "^/(kontakt|en/contact)/?$" NOINDEX_PAGE
+# zu verbieten, meldet die Search Console zu Recht. Es sind dieselben vier
+# Adressen wie in der Regel unten.
+SetEnvIf Request_URI "^/(kontakt|en/contact|datenschutz|en/privacy)/?$" NOINDEX_PAGE
 Header always set X-Robots-Tag "noindex" env=NOINDEX_PAGE
 
 # ---------------------------------------------------------------------------
