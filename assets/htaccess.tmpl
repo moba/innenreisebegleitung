@@ -25,6 +25,61 @@ ErrorDocument 404 /404.html
 AddDefaultCharset UTF-8
 
 # ---------------------------------------------------------------------------
+# Falsch kodierter Hostname von berührungen.com
+#
+# LinkedIn wandelt den Umlaut beim Abruf nicht in Punycode um, sondern
+# kodiert ihn prozentweise und schickt "Host: ber%C3%BChrungen.com". Zu
+# diesem Namen gibt es keinen vhost, die Anfrage landet deshalb in der
+# Auslieferung der Hauptdomain, und LiteSpeed schickt sie von dort mit 307
+# auf www.innenreisebegleitung.de weiter. Die Vorschau nennt seitdem die
+# falsche Adresse, obwohl der geteilte Verweis auf berührungen.com zeigt.
+#
+# Ohne diese Regel greift in der Auslieferung innenreise zusätzlich die
+# www-Umleitung weiter unten und zeigt auf www.ber%C3%BChrungen.com -- einen
+# Namen, den es genauso wenig gibt.
+#
+# Kein Widerspruch zur Warnung am Kopf der Vorlage: verboten ist der
+# Vergleich gegen den *echten* Hostnamen, der als Punycode ankommt. Geprüft
+# wird hier die kaputte Schreibweise, und das Ziel der Umleitung trifft das
+# Muster nie -- sie kann also nicht kreisen.
+#
+# Welche Bytes genau ankommen, wurde gemessen: eine vorübergehende Regel
+# leitete jeden unbekannten Host auf "/?host=%{HTTP_HOST}" um, so dass der
+# Post Inspector die Zeichenfolge in seiner Weiterleitungskette anzeigte.
+# LinkedIn schickt danach "ber%C3%BChrungen.com" mit echten Prozentzeichen,
+# nicht die rohen UTF-8-Bytes des Umlauts. Der Server schreibt den Host-Header
+# zusätzlich klein.
+#
+# Das Muster nennt die Zeichen des Umlauts nicht, sondern zählt nur, wie
+# viele an seiner Stelle stehen dürfen: ".{1,6}" trifft jede Schreibweise --
+# "%C3%BC" (sechs Zeichen), die zwei Bytes C3 BC, und den Umlaut als ein
+# einzelnes Zeichen, falls die Regex-Maschine im UTF-8-Modus läuft und einen
+# Punkt pro Zeichen statt pro Byte zählt.
+#
+# Diese Gleichgültigkeit ist der Punkt. Eine Fassung, die auf "%C3%BC" bzw.
+# zwei Bytes genau passte, traf am Server nicht zu, obwohl dieselbe Regex
+# gegen dieselben Eingaben lokal zutraf -- welche Maschine mit welchen
+# Einstellungen dort arbeitet, ist von außen nicht feststellbar. Das Muster
+# oben muss das nicht wissen.
+#
+# Ein literales % wäre ohnehin heikel: es grenzt in einer CondPattern an die
+# Ersetzungssyntax von mod_rewrite. Und ein rohes ü in dieser Datei hinge
+# daran, dass jedes Werkzeug auf dem Weg zum Server die Kodierung unangetastet
+# lässt.
+#
+# Dass dadurch auch Namen wie "berXYhrungen.com" zutreffen, ist folgenlos:
+# sie gehören ebenso wenig hierher und landen auf derselben Adresse.
+#
+# Der Schwanz "\.?(:[0-9]+)?" ist Vorsorge, keine Reaktion: %{HTTP_HOST}
+# enthält den Host-Header so, wie er ankommt, und der trägt je nach Abrufer
+# noch den Port ("berührungen.com:443") oder den abschließenden Punkt der
+# absoluten DNS-Notation ("berührungen.com."). LinkedIn schickt beides nicht,
+# andere Vorschau-Dienste können es. Ein Muster, das strikt auf ".com" endet,
+# liefe an ihnen vorbei.
+RewriteCond %{HTTP_HOST} ^(www\.)?ber.{1,6}hrungen\.com\.?(:[0-9]+)?$ [NC]
+RewriteRule ^(.*)$ https://xn--berhrungen-ceb.com/$1 [R=301,L]
+
+# ---------------------------------------------------------------------------
 # Auf die kanonische Schreibweise der Adresse umleiten.
 {{ if $wantsWww }}# Diese Auslieferung läuft mit www, also die Form ohne www dorthin schicken.
 RewriteCond %{HTTP_HOST} !^www\. [NC]
