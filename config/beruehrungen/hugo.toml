@@ -3,7 +3,15 @@
 # Verzeichnisname ohne Umlaut, weil er als --environment auf der Kommandozeile
 # getippt wird.
 
-baseURL = "https://berührungen.com/"
+# Punycode statt "https://berührungen.com/": aus einer baseURL mit Umlaut baut
+# Hugo alle absoluten Adressen mit prozentkodiertem Hostnamen zusammen, also
+# https://ber%C3%BChrungen.com/. Prozentzeichen sind im Hostteil einer Adresse
+# nicht vorgesehen -- der Name lässt sich so nicht auflösen. Betroffen waren
+# og:url, rel=canonical, hreflang und jeder Verweis auf CSS und Bilder; die
+# Vorschau in LinkedIn, Signal und Mastodon fiel damit auf die Hosts zurück.
+# Browser zeigen dem Leser trotzdem die Umlautform an, der Punycode steht nur
+# im Quelltext.
+baseURL = "https://xn--berhrungen-ceb.com/"
 
 [params]
   # Wird im Inhalt über {{< email >}} eingesetzt, siehe content/kontakt.md.
