@@ -1,0 +1,29 @@
+// Ersatz für fork-awesome/fork-awesome, damit die Theme-Partials weiter
+// kompilieren, ohne die Icon-Schrift einzubinden.
+//
+// _content.scss benutzt fa-icon und fa-content($fa-var-external-link). Beides
+// wird hier so definiert, dass keine Regel entsteht; das sichtbare Symbol
+// setzt _icons.scss.
+
+$fa-var-external-link: none;
+
+@function fa-content($fa-var) {
+  @return $fa-var;
+}
+
+@mixin fa-icon() {
+  // absichtlich leer
+}
+
+// Aus fork-awesome/_screen-reader.scss -- wird von render-heading.html
+// gebraucht und hängt nicht an der Icon-Schrift.
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

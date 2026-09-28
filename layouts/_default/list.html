@@ -1,0 +1,17 @@
+{{/* Übersichtsseite eines Verzeichnisses (content/gruppen/_index.md).
+
+     Überschreibt das list.html des Themes. Das baut aus den Unterseiten eine
+     Blog-Liste mit Datum -- hier stand dann „Januar 1, 0001“, weil die Seiten
+     kein Datum im Front Matter haben und auch keins brauchen.
+
+     Die Übersicht verlinkt ihre Unterseiten von Hand im Fließtext, deshalb
+     wird sie wie eine gewöhnliche Seite ausgegeben: nur Titel und Inhalt,
+     genau wie _default/single.html. */}}
+
+{{ define "title" }}
+  {{ .Title }} · {{ .Site.Title }}
+{{ end }}
+
+{{ define "content" }}
+  {{ partial "page.html" . }}
+{{ end }}

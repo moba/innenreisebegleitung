@@ -2,6 +2,9 @@ User-agent: *
 Disallow: /images/
 Disallow: /contact/
 Disallow: /kontakt/
+Disallow: /datenschutz/
+Disallow: /en/contact/
+Disallow: /en/privacy/
 Disallow: /*.jpg$
 Disallow: /*.jpeg$
 Disallow: /*.png$

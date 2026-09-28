@@ -1,0 +1,70 @@
+// Die drei Symbole, die die Website wirklich benutzt.
+//
+// Zwei davon stehen als Inline-SVG im Markup (Menüknopf in
+// layouts/partials/header.html, Überschriften-Anker in
+// layouts/_default/_markup/render-heading.html), das dritte lässt sich nicht
+// ins Markup schreiben, weil es an ein ::after hängt -- deshalb hier als
+// Maske. mask statt background-image, damit currentColor greift und das
+// Symbol im hellen wie im dunklen Schema stimmt.
+
+.inline-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+// Das Theme färbt den Menüknopf über Regeln, die auf das <i> der Icon-Schrift
+// zielen (_navigation.scss, _navigation_dark.scss). Die greifen jetzt nicht
+// mehr; hier die gleichen Zustände für das SVG. Die Grundfarbe kommt über
+// currentColor aus der Vererbung und braucht keine eigene Regel.
+.navigation {
+  .menu-button {
+    cursor: pointer;
+
+    &:hover .inline-icon,
+    &:focus .inline-icon {
+      color: $alt-fg-color;
+    }
+  }
+
+  // Bei geöffnetem Menü liegt der Knopf auf der aufgeklappten Fläche und
+  // braucht deren Kontrastfarbe.
+  #menu-toggle:checked + label > .inline-icon {
+    color: $alt-bg-color;
+  }
+}
+
+body.colorscheme-dark .navigation {
+  .menu-button {
+    &:hover .inline-icon,
+    &:focus .inline-icon {
+      color: $alt-fg-color-dark;
+    }
+  }
+
+  #menu-toggle:checked + label > .inline-icon {
+    color: $alt-bg-color-dark;
+  }
+}
+
+// Ersetzt die Fork-Awesome-Regel aus _content.scss (gleiche Spezifität,
+// steht später in der Kaskade).
+.content article a:where(.external-link)::after {
+  content: "";
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  margin-left: 0.4em;
+  padding-left: 0;
+  font-size: inherit;
+  vertical-align: baseline;
+  background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/%3E%3Cpolyline points='15 3 21 3 21 9'/%3E%3Cline x1='10' y1='14' x2='21' y2='3'/%3E%3C/svg%3E") no-repeat center / contain;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/%3E%3Cpolyline points='15 3 21 3 21 9'/%3E%3Cline x1='10' y1='14' x2='21' y2='3'/%3E%3C/svg%3E") no-repeat center / contain;
+}

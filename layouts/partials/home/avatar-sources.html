@@ -1,0 +1,39 @@
+{{- /* Liefert die aufbereiteten Fassungen des Startseitenbildes als Dict.
+
+     Wird von zwei Stellen gebraucht -- vom <img> in home/avatar.html und vom
+     <link rel="preload"> in head/extensions.html -- deshalb hier einmal
+     zentral. Gibt ein leeres Dict zurück, wenn kein verarbeitbares Rasterbild
+     hinterlegt ist.
+
+     Anzeigebreite laut assets/css/custom.css: 44rem = 440 px, auf schmalen
+     Bildschirmen die volle Inhaltsbreite. */ -}}
+
+{{- $out := dict -}}
+{{- with .Site.Params.avatarURL -}}
+  {{- $img := resources.Get (strings.TrimPrefix "/" .) -}}
+  {{- if reflect.IsImageResourceWithMeta $img -}}
+    {{- $widths := slice -}}
+    {{- range (slice 440 880) -}}
+      {{- if lt . $img.Width -}}{{- $widths = $widths | append . -}}{{- end -}}
+    {{- end -}}
+    {{- $widths = $widths | append $img.Width -}}
+
+    {{- $webp := slice -}}
+    {{- $orig := slice -}}
+    {{- range $widths -}}
+      {{- $w := . -}}
+      {{- $webp = $webp | append (printf "%s %dw" ($img.Resize (printf "%dx webp q78" $w)).RelPermalink $w) -}}
+      {{- $orig = $orig | append (printf "%s %dw" ($img.Resize (printf "%dx q82" $w)).RelPermalink $w) -}}
+    {{- end -}}
+
+    {{- $default := $img.Resize "440x q82" -}}
+    {{- $out = dict
+          "webp" (delimit $webp ", ")
+          "orig" (delimit $orig ", ")
+          "sizes" "(max-width: 480px) 100vw, 440px"
+          "src" $default.RelPermalink
+          "width" $default.Width
+          "height" $default.Height -}}
+  {{- end -}}
+{{- end -}}
+{{- return $out -}}

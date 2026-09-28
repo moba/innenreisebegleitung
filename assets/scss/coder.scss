@@ -1,0 +1,24 @@
+// Überschreibt themes/hugo-coder/assets/scss/coder.scss.
+//
+// Einziger Unterschied: statt der kompletten Fork-Awesome-Icon-Schrift
+// (108 KB woff2 plus rund 25 KB CSS für über 700 Symbolklassen, von denen
+// diese Website drei benutzt) werden nur die tatsächlich gebrauchten Symbole
+// eingebunden -- als Inline-SVG im Markup bzw. als data:-URI in _icons.scss.
+// _fork-awesome-shim muss vor "content" stehen, weil _content.scss die
+// Mixins/Funktionen von Fork Awesome benutzt; _icons danach, weil es dessen
+// Regel für .external-link ersetzt.
+
+@import "css/normalize";
+@import "fork-awesome-shim";
+@import "variables";
+@import "base";
+@import "content";
+@import "notices";
+@import "navigation";
+@import "pagination";
+@import "tabs";
+@import "taxonomies";
+@import "footer";
+@import "float";
+@import "syntax";
+@import "icons";

@@ -2,6 +2,17 @@
 <html lang="{{ .Site.Language.Lang }}">
 
 <head>
+  {{/* Muss das Allererste im <head> stehen -- vor dem <title>.
+
+       Der Server schickt "Content-Type: text/html" ohne charset, die Kodierung
+       erfährt der Parser also erst aus dieser Zeile. Stand sie hinter dem
+       <title>, war dessen "Über" zu dem Zeitpunkt schon als Latin-1 gelesen.
+       Browser starten dann zwar neu, andere Verarbeiter (Vorschau-Bots,
+       Feedleser, Suchmaschinen) tun das nicht.
+
+       Die Zeile steht deshalb hier und nicht mehr in head/meta-tags.html.
+       Zusätzlich setzt static/.htaccess jetzt AddDefaultCharset UTF-8. */}}
+  <meta charset="utf-8">
   <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
   {{ partial "head.html" . }}
 </head>
@@ -13,7 +24,7 @@
 {{ $csClass = "colorscheme-auto" }}
 {{ end }}
 
-<body class="preload-transitions {{ $csClass }}{{ if .Site.Params.rtl }} rtl{{ end }}">
+<body class="preload-transitions {{ $csClass }}{{ if .Site.Params.rtl }} rtl{{ end }}{{ block "bodyclass" . }}{{ end }}">
   {{ partial "float" . }}
   <main class="wrapper">
     {{ partial "header.html" . }}

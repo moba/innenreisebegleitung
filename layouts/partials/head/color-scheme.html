@@ -1,11 +1,18 @@
 {{ if or (eq .Site.Params.colorScheme "auto") (eq .Site.Params.colorScheme "dark") }}
+  {{/* Das zugehörige Aufräumen der gespeicherten Schema-Auswahl steht in
+       head/meta-tags.html -- es muss vor allen Stylesheets laufen. */}}
+
+  {{/* media="(prefers-color-scheme: dark)": im hellen Schema lädt der Browser
+       das Stylesheet nur noch mit niedriger Priorität und blockiert das
+       Rendern nicht damit. */}}
+  {{ $media := cond (eq .Site.Params.colorScheme "auto") "screen and (prefers-color-scheme: dark)" "screen" }}
   {{ if hugo.IsServer }}
     {{ $cssOpts := (dict "targetPath" "css/coder-dark.css" "enableSourceMap" true ) }}
     {{ $styles := resources.Get "scss/coder-dark.scss" | resources.ExecuteAsTemplate "style.coder-dark.css" . | toCSS $cssOpts }}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="{{ $media }}">
   {{ else }}
     {{ $cssOpts := (dict "targetPath" "css/coder-dark.css" ) }}
     {{ $styles := resources.Get "scss/coder-dark.scss" | resources.ExecuteAsTemplate "style.coder-dark.css" . | toCSS $cssOpts | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="{{ $media }}" />
   {{ end }}
 {{ end }}

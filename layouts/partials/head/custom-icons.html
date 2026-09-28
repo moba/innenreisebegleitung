@@ -1,0 +1,16 @@
+{{- /* Überschreibt das Theme-Partial.
+
+     Unterschiede:
+       * kein <link rel="mask-icon">: static/images/safari-pinned-tab.svg gibt
+         es nicht, das Theme verlinkte es trotzdem fest -- jeder Safari-Aufruf
+         endete in einem 404.
+       * nur ein apple-touch-icon statt zweier Verweise auf dieselbe Datei;
+         das sizes="180x180" des Themes war falsch (die Datei ist 512x512).
+     Die Größenangaben der PNG-Favicons kommen aus den Parametern und stimmen
+     jetzt mit den Dateien überein. */ -}}
+
+<link rel="icon" type="image/svg+xml" href="{{ .Site.Params.faviconSVG | default "/images/favicon.svg" | relURL }}" sizes="any">
+<link rel="icon" type="image/png" href="{{ .Site.Params.favicon_32 | default "/images/favicon-32x32.png" | relURL }}" sizes="32x32">
+<link rel="icon" type="image/png" href="{{ .Site.Params.favicon_16 | default "/images/favicon-16x16.png" | relURL }}" sizes="16x16">
+
+<link rel="apple-touch-icon" href="{{ .Site.Params.touchicon | default "/images/apple-touch-icon.png" | relURL }}">

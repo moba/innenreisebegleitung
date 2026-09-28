@@ -1,3 +1,74 @@
+{{- /* Bild-Render-Hook.
+
+     Aufgaben:
+       * Quellbild in mehreren Breiten ausgeben (srcset) statt in Originalgröße.
+         Die Inhaltsspalte ist höchstens 860 px breit (.container: 90rem bei
+         font-size 62.5% = 900 px minus 2 x 2rem Innenabstand), mehr als die
+         doppelte Breite (1720 px für 2x-Displays) bringt also nichts.
+       * Zusätzlich eine WebP-Fassung anbieten; das Ausgangsformat bleibt als
+         Rückfallebene erhalten.
+       * width/height setzen, damit der Platz vor dem Laden reserviert ist
+         (kein Layoutsprung).
+       * Nur das erste Bild einer Seite sofort laden -- es steht bei allen
+         Inhaltsseiten ganz oben und ist damit das LCP-Element. Alle weiteren
+         Bilder werden nachgeladen.
+
+     Bilder ohne Rastermaße (SVG, u. a. die Kontakt-Symbole mit Klasse
+     "img-tiny") gehen unverändert durch. */ -}}
+
+{{- $dest := .Destination -}}
+
+{{- /* Bild-Ressource suchen: erst im Page Bundle, dann im assets-Dateisystem
+       (dort ist per module.mounts auch static/ eingehängt). */ -}}
+{{- $img := .Page.Resources.GetMatch $dest -}}
+{{- if not $img -}}
+  {{- $img = resources.Get (strings.TrimPrefix "/" $dest) -}}
+{{- end -}}
+{{- if and (not $img) .Page.File -}}
+  {{- $img = resources.Get (path.Join .Page.File.Dir $dest) -}}
+{{- end -}}
+
+{{- /* Erstes Bild der Seite? .Store gilt pro Seite, der Hook läuft in
+       Dokumentreihenfolge. */ -}}
+{{- $first := not (.Page.Store.Get "renderImageSeen") -}}
+{{- .Page.Store.Set "renderImageSeen" true -}}
+
+{{- $loading := cond $first "eager" "lazy" -}}
+
 <span class="{{ .Title }}">
-  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" />
+{{- if not (reflect.IsImageResourceWithMeta $img) -}}
+  <img src="{{ $dest | safeURL }}" alt="{{ .Text }}" loading="{{ $loading }}" decoding="async" />
+{{- else -}}
+  {{- /* Zielbreiten, aufsteigend, begrenzt auf die Breite des Originals --
+         hochskaliert wird nie. */ -}}
+  {{- $maxWidth := 1720 -}}
+  {{- $target := cond (lt $img.Width $maxWidth) $img.Width $maxWidth -}}
+  {{- $widths := slice -}}
+  {{- range (slice 640 860 1280) -}}
+    {{- if lt . $target -}}{{- $widths = $widths | append . -}}{{- end -}}
+  {{- end -}}
+  {{- $widths = $widths | append $target -}}
+
+  {{- $webp := slice -}}
+  {{- $orig := slice -}}
+  {{- range $widths -}}
+    {{- $w := . -}}
+    {{- $webp = $webp | append (printf "%s %dw" ($img.Resize (printf "%dx webp q75" $w)).RelPermalink $w) -}}
+    {{- $orig = $orig | append (printf "%s %dw" ($img.Resize (printf "%dx q80" $w)).RelPermalink $w) -}}
+  {{- end -}}
+
+  {{- /* src greift nur ohne srcset-Unterstützung; dafür reicht die
+         1x-Fassung. width/height dienen ohnehin nur dem Seitenverhältnis. */ -}}
+  {{- $defaultWidth := cond (lt $target 860) $target 860 -}}
+  {{- $default := $img.Resize (printf "%dx q80" $defaultWidth) -}}
+  {{- $sizes := "(max-width: 900px) 100vw, 860px" -}}
+
+  <picture>
+    <source type="image/webp" srcset="{{ delimit $webp ", " }}" sizes="{{ $sizes }}">
+    <img src="{{ $default.RelPermalink }}" srcset="{{ delimit $orig ", " }}" sizes="{{ $sizes }}"
+      width="{{ $default.Width }}" height="{{ $default.Height }}"
+      alt="{{ .Text }}" loading="{{ $loading }}" decoding="async"
+      {{- if $first }} fetchpriority="high"{{ end }} />
+  </picture>
+{{- end -}}
 </span>

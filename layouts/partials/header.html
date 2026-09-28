@@ -1,12 +1,18 @@
 <nav class="navigation">
   <section class="container">
-    <a class="navigation-title" href="{{ .Site.BaseURL | relLangURL }}">
+    {{/* .Site.Home.RelPermalink statt `.Site.BaseURL | relLangURL`: letzteres
+         lieferte in der englischen Fassung "/en" ohne Schrägstrich am Ende,
+         jeder Klick auf den Seitentitel kostete dort eine 301-Umleitung. */}}
+    <a class="navigation-title" href="{{ .Site.Home.RelPermalink }}">
       {{ .Site.Title }}
     </a>
     {{ if or .Site.Menus.main hugo.IsMultilingual }}
       <input type="checkbox" id="menu-toggle" />
       <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+        {{/* Inline-SVG statt Icon-Schrift, siehe assets/scss/_icons.scss. */}}
+        <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
       </label>
       <ul class="navigation-list">
         {{ with .Site.Menus.main}}
@@ -17,18 +23,29 @@
           {{ end }}
         {{ end }}
         {{ if hugo.IsMultilingual }}
-          {{ $node := . }}
-          {{ .Scratch.Set "separator" true }}
-          {{ range (default .Site.Home.AllTranslations .Translations) }}
-            {{ if ne $.Site.Language .Language }}
-              {{ if $node.Scratch.Get "separator" }}
-                <li class="navigation-item menu-separator">
-                  <span>|</span>
-                </li>
-                {{ $node.Scratch.Set "separator" false }}
+          {{/* Sprachumschalter: verlinkt nur die jeweils andere Sprache (DE
+               bzw. EN). Hat die Seite keine Übersetzung, wird auf die
+               Startseite der anderen Sprache verwiesen. */}}
+          {{ $others := .Translations }}
+          {{ if not $others }}
+            {{ $fallback := slice }}
+            {{ range .Site.Home.AllTranslations }}
+              {{ if ne .Language.Lang $.Site.Language.Lang }}
+                {{ $fallback = $fallback | append . }}
               {{ end }}
+            {{ end }}
+            {{ $others = $fallback }}
+          {{ end }}
+          {{ if $others }}
+            <li class="navigation-item menu-separator">
+              <span>|</span>
+            </li>
+            {{ range $others }}
               <li class="navigation-item">
-                <a href="{{ .RelPermalink }}">{{ .Language.LanguageName | emojify }}</a>
+                <a class="navigation-link language-link"
+                   href="{{ .RelPermalink }}"
+                   hreflang="{{ .Language.Lang }}"
+                   lang="{{ .Language.Lang }}">{{ .Language.Label | emojify }}</a>
               </li>
             {{ end }}
           {{ end }}

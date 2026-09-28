@@ -1,0 +1,24 @@
+{{- /* Überschreibt das Theme-Partial: das Startseitenbild ist das
+     LCP-Element und wird in mehreren Breiten sowie als WebP ausgeliefert.
+     Das passende <link rel="preload"> steht in head/extensions.html. */ -}}
+
+{{- $a := partialCached "home/avatar-sources.html" . -}}
+
+{{- if $a.src -}}
+  <div class="avatar">
+    <picture>
+      <source type="image/webp" srcset="{{ $a.webp }}" sizes="{{ $a.sizes }}">
+      <img src="{{ $a.src }}" srcset="{{ $a.orig }}" sizes="{{ $a.sizes }}"
+        width="{{ $a.width }}" height="{{ $a.height }}"
+        alt="{{ .Site.Params.author | default "avatar" }}"
+        fetchpriority="high" decoding="async">
+    </picture>
+  </div>
+{{- else -}}
+  {{- with .Site.Params.avatarURL -}}
+    <div class="avatar"><img src="{{ . | relURL }}" alt="avatar"></div>
+  {{- end -}}
+{{- end -}}
+{{- with .Site.Params.gravatar -}}
+  <div class="avatar"><img src="https://www.gravatar.com/avatar/{{ md5 . }}?s=240&d=mp" alt="gravatar"></div>
+{{- end -}}

@@ -1,0 +1,10 @@
+{{- /* Setzt die Kontaktadresse der jeweiligen Auslieferung ein; sie steht in
+     config/<umgebung>/hugo.toml unter params.email.
+
+     Bewusst als reiner Text und nicht als mailto:-Verweis -- so stand die
+     Adresse schon vorher auf der Kontaktseite. */ -}}
+{{- with .Site.Params.email -}}
+  {{- . -}}
+{{- else -}}
+  {{- errorf "params.email fehlt -- gesetzt wird sie in config/<umgebung>/hugo.toml (%s)" $.Position -}}
+{{- end -}}

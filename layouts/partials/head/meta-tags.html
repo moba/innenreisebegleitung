@@ -1,6 +1,37 @@
-<meta charset="utf-8">
+{{/* <meta charset> steht in layouts/_default/baseof.html, weil es vor dem
+     <title> kommen muss -- Begründung dort. */}}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
+
+{{ if eq .Site.Params.colorScheme "auto" }}
+{{/* Der Farbschema-Umschalter ist abgeschaltet (hideColorSchemeToggle), das
+     Schema folgt allein dem Betriebssystem. Eine aus der Zeit davor noch in
+     localStorage liegende Auswahl würde coder.js dazu bringen, daran vorbei
+     colorscheme-dark zu setzen -- und damit ein Schema zu verlangen, dessen
+     Stylesheet wegen des media-Attributs in head/color-scheme.html gar nicht
+     geladen wird.
+
+     Steht hier und nicht dort, weil ein Skript im <head> erst nach den davor
+     verlinkten Stylesheets ausgeführt wird und den Parser so lange anhält --
+     die Stylesheets müssen also alle danach kommen. */}}
+<script>try { localStorage.removeItem("colorscheme"); } catch (e) {}</script>
+{{ end }}
+
+{{ if .IsHome }}
+{{/* Das Startseitenbild ist dort das LCP-Element. Ohne Preload findet der
+     Browser es erst, nachdem das CSS geladen und der Baum aufgebaut ist;
+     deshalb steht der Verweis so weit oben wie möglich.
+
+     imagesrcset/imagesizes müssen mit dem <picture> in home/avatar.html
+     übereinstimmen, sonst wird zweimal geladen. safeHTMLAttr, weil
+     html/template imagesrcset wie ein einzelnes URL-Attribut behandelt und
+     die Trennzeichen der Liste prozentkodieren würde. */}}
+{{ $a := partialCached "home/avatar-sources.html" . }}
+{{ with $a.src }}
+<link rel="preload" as="image" type="image/webp" fetchpriority="high"
+  {{ printf "imagesrcset=%q imagesizes=%q" $a.webp $a.sizes | safeHTMLAttr }}>
+{{ end }}
+{{ end }}
 
 {{ if .Site.Params.csp }}
 {{ partial "csp.html" . }}
@@ -8,10 +39,89 @@
 
 {{ with .Site.Params.author }}
 <meta name="author" content="{{ . }}">{{ end }}
-<meta name="description" content="{{ .Description | default (.Summary | default .Site.Params.description ) }}">
+{{/* Beschreibungstext für Suchmaschinen, Vorschaubilder und Nachrichten-
+     dienste. Wird einmal berechnet und weiter unten für Open Graph und
+     Twitter Cards wiederverwendet.
+
+     Zwei Dinge passieren hier:
+
+     1. .Summary liefert HTML, keinen Klartext. Ohne plainify landeten Tags
+        und Zeilenumbrüche roh im content-Attribut; replaceRE zieht die dabei
+        entstehenden Leerraumketten wieder auf ein Leerzeichen zusammen.
+
+     2. Fast jede Seite trägt ihre Überschrift als Erstes im Text. Die
+        Zusammenfassung begann deshalb mit "Berührungen in Stille Manches
+        lässt sich ..." -- Überschrift und erster Satz ohne Trennung. Steht
+        die Überschrift am Anfang, wird sie hier mit einem Doppelpunkt
+        abgesetzt. Die Überschrift wird aus dem Text gelesen und nicht aus
+        `title` genommen, weil beides auseinandergehen kann: die Gruppenseite
+        heißt im Front Matter "Gruppe: Berührungen in Stille", im Text aber
+        nur "Berührungen in Stille".
+
+        Seiten ohne Überschrift im Text -- Über, Erfahrungen, Kontakt --
+        bleiben unverändert, ebenso Seiten mit eigenem `description` im
+        Front Matter. */}}
+{{- $description := .Description -}}
+{{- if not $description -}}
+  {{- $summary := .Summary | plainify | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace -}}
+  {{- $heading := "" -}}
+  {{- with findRE `(?s)<h1.*?</h1>` .Content 1 -}}
+    {{- $heading = index . 0 | plainify | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace -}}
+  {{- end -}}
+  {{- if and $heading (hasPrefix $summary $heading) -}}
+    {{- $rest := strings.TrimPrefix $heading $summary | strings.TrimSpace -}}
+    {{- with $rest }}{{ $summary = printf "%s: %s" $heading . }}{{ end -}}
+  {{- end -}}
+  {{- $description = $summary | default .Site.Params.description -}}
+{{- end -}}
+{{- $description = $description | plainify | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace -}}
+<meta name="description" content="{{ $description }}">
 <meta name="keywords" content="{{ (delimit .Keywords ", ") | default .Site.Params.keywords }}">
 
 <link rel="me" href="https://social.tchncs.de/@gamambel">
 
-{{ template "_internal/twitter_cards.html" . }}
-{{ template "_internal/opengraph.html" . }}
+{{ if hugo.IsMultilingual }}
+{{ $translations := .AllTranslations }}
+{{ if gt (len $translations) 1 }}
+{{ $default := "" }}
+{{ range $translations }}
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+{{/* Die Sprache ohne URL-Präfix ist die Standardsprache (siehe
+     defaultContentLanguageInSubdir in config.toml). */}}
+{{ if eq .Site.LanguagePrefix "" }}{{ $default = .Permalink }}{{ end }}
+{{ end }}
+{{ with $default }}
+<link rel="alternate" hreflang="x-default" href="{{ . }}">
+{{ end }}
+{{ end }}
+{{ end }}
+
+{{/* Open Graph und Twitter Cards von Hand statt über
+     {{ template "_internal/opengraph.html" }}.
+
+     Grund: Die internen Vorlagen bilden ihren Beschreibungstext selbst aus
+     .Summary und lassen sich dabei nichts vorgeben. Der Doppelpunkt aus der
+     Berechnung oben käme dort also nicht an -- und genau diese Felder lesen
+     WhatsApp, Signal und Mastodon für ihre Vorschau. Die Tags unten
+     entsprechen dem, was die internen Vorlagen für diese Website erzeugt
+     haben; hinzugekommen ist og:locale:alternate für die jeweils andere
+     Sprache. */}}
+{{- $images := .Params.images | default .Site.Params.images -}}
+{{- $image := "" -}}
+{{- with $images }}{{ $image = index . 0 | absURL }}{{ end -}}
+{{- $locale := .Site.Language.LanguageCode | default .Site.Language.Lang | replaceRE "-" "_" -}}
+
+<meta name="twitter:card" content="{{ if $image }}summary_large_image{{ else }}summary{{ end }}">
+{{ with $image }}<meta name="twitter:image" content="{{ . }}">
+{{ end }}<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ $description }}">
+
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:locale" content="{{ $locale }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+{{ with $image }}<meta property="og:image" content="{{ . }}">
+{{ end }}{{ range .Translations }}<meta property="og:locale:alternate" content="{{ .Site.Language.LanguageCode | default .Site.Language.Lang | replaceRE "-" "_" }}">
+{{ end }}

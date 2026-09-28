@@ -1,4 +1,6 @@
-<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+{{/* Kein Preload der Fork-Awesome-Schrift mehr: die Icon-Schrift ist raus,
+     die drei benutzten Symbole stecken als SVG im Markup bzw. im CSS
+     (siehe assets/scss/coder.scss und assets/scss/_icons.scss). */}}
 
 {{ if hugo.IsServer }}
   {{ $cssOpts := (dict "targetPath" "css/coder.css" "enableSourceMap" true ) }}
