@@ -97,19 +97,30 @@ Header set X-Robots-Tag "noimageindex"
 	Header set X-Robots-Tag "noindex, noarchive, nosnippet"
 </FilesMatch>
 
-# Hier stand ein X-Robots-Tag "noindex" für /kontakt/ und /en/contact/. Es ist
-# im September 2026 entfernt worden, weil es nie gewirkt hat: static/robots.txt
-# sperrt beide Adressen per Disallow, also ruft Google sie gar nicht erst ab
-# und bekommt den Header nie zu sehen. Beides zusammen hob sich auf und tauchte
-# in der Search Console als "Discovered - currently not indexed" auf.
+# Die beiden Kontaktseiten gehören nicht in den Suchindex. <FilesMatch> hilft
+# hier nicht: die Adressen sind Verzeichnisse und landen alle auf index.html.
+# Deshalb über eine Umgebungsvariable am Request-Pfad. `always`, damit der
+# Header auch an der 301 von /contact/ hängt.
 #
-# Die Sperre bleibt in robots.txt, der Header entfällt. Die vier gesperrten
-# Seiten stehen zusätzlich nicht mehr im Sitemap (sitemap.disable im Front
-# Matter von kontakt.md, kontakt.en.md, datenschutz.md, datenschutz.en.md) --
-# sie dort aufzuführen und gleichzeitig zu sperren, war der Widerspruch.
+# Dass static/robots.txt dieselben Adressen zusätzlich per Disallow sperrt,
+# ist Absicht und kein Versehen -- beides zu setzen wird gelegentlich als
+# Widerspruch gemeldet, ist hier aber gewollt:
 #
-# Wer sie wirklich aus dem Index bekommen will, muss umgekehrt vorgehen: die
-# Disallow-Zeilen streichen, damit der noindex-Header gelesen werden kann.
+#   Disallow  verhindert, dass der Inhalt überhaupt abgerufen wird. Die
+#             Adresse selbst darf in Ergebnissen auftauchen, dann ohne
+#             Textauszug. Genau das ist hier erwünscht.
+#   noindex   greift dort, wo Disallow nicht gilt: bei Suchdiensten, die
+#             robots.txt ignorieren aber den Header beachten, und falls die
+#             Disallow-Zeilen irgendwann fallen.
+#
+# Der Header ist also Absicherung, nicht Dopplung. Bitte nicht "aufräumen".
+#
+# Aus dem Sitemap sind die gesperrten Seiten dagegen heraus (sitemap.disable
+# im Front Matter von kontakt.md, kontakt.en.md, datenschutz.md,
+# datenschutz.en.md): eine Adresse einzureichen und gleichzeitig das Abrufen
+# zu verbieten, meldet die Search Console zu Recht.
+SetEnvIf Request_URI "^/(kontakt|en/contact)/?$" NOINDEX_PAGE
+Header always set X-Robots-Tag "noindex" env=NOINDEX_PAGE
 
 # ---------------------------------------------------------------------------
 # Cache-Control
