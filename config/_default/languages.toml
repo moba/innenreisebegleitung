@@ -1,0 +1,21 @@
+# Mehrsprachigkeit. Übersetzungen werden über das Dateinamen-Suffix zugeordnet:
+# content/über.md (de) <-> content/über.en.md (en). Die URL pro Sprache steuert
+# der `slug` im Front Matter, z.B. /ueber/ bzw. /en/about/.
+# `label` ist zugleich die Beschriftung im Sprachumschalter der Menüleiste.
+#
+# `info` (der Untertitel unter dem Namen auf der Startseite) und die davon
+# abgeleitete `description` stehen pro Auslieferung in
+# config/<umgebung>/languages.toml -- das ist der einzige sichtbare
+# Unterschied zwischen den beiden Adressen.
+
+[de]
+  label = "DE"
+  locale = "de-DE"
+  weight = 1
+  title = "Moritz Valentin Bartl"
+
+[en]
+  label = "EN"
+  locale = "en"
+  weight = 2
+  title = "Moritz Valentin Bartl"

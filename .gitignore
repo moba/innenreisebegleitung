@@ -1,5 +1,14 @@
 public/
 
 # Lizenzierte Bildoriginale in voller Auflösung (Quelle für die optimierten
-# Fassungen unter static/images/) -- zu groß fürs Repo, lokal aufbewahren
+# Fassungen unter assets/images/) -- zu groß fürs Repo, lokal aufbewahren.
+# Hier liegt seit September 2026 auch alles, was früher unbenutzt in
+# static/images/ lag und mit jedem Deploy auf den Server ging.
 originals/
+
+# Von Hugo erzeugte Bildfassungen und kompiliertes SCSS. Lässt sich jederzeit
+# aus assets/ neu bauen; als Binärdateien gehören sie nicht ins Repo.
+resources/_gen/
+
+.DS_Store
+.hugo_build.lock

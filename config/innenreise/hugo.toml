@@ -1,0 +1,13 @@
+# https://www.innenreisebegleitung.de/
+#
+# Mit www: so lief die Adresse schon vor der Umleitung auf berührungen.com,
+# und darauf zeigen die bestehenden Verweise. assets/htaccess.tmpl leitet
+# deshalb hier die Adresse ohne www auf die mit www um -- genau andersherum
+# als bei berührungen.com. Die Richtung ergibt sich automatisch aus der
+# baseURL, es gibt dafür keinen eigenen Schalter.
+
+baseURL = "https://www.innenreisebegleitung.de/"
+
+[params]
+  # Wird im Inhalt über {{< email >}} eingesetzt, siehe content/kontakt.md.
+  email = "moritz@innenreisebegleitung.de"

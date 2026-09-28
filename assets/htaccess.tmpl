@@ -1,0 +1,147 @@
+{{- /* Vorlage für die .htaccess im Wurzelverzeichnis der Auslieferung.
+
+     Liegt in assets/ statt in static/, weil zwei der Regeln von der Adresse
+     abhängen und die sich je Umgebung unterscheidet. Erzeugt wird die Datei
+     in layouts/index.html, genau einmal pro Bau.
+
+     WICHTIG: Der Hostname darf in keiner RewriteCond wörtlich auftauchen.
+     Bei berührungen.com steht im Host-Header der Anfrage die Punycode-Form
+     xn--berhrungen-ceb.com; ein Vergleich gegen "berührungen.com" träfe nie
+     zu, und die daran hängende Umleitung liefe endlos. Die Regeln unten
+     kommen deshalb ohne Hostnamen aus und arbeiten nur mit %{HTTP_HOST}. */ -}}
+{{- $host := (urls.Parse .Site.BaseURL).Host -}}
+{{- $wantsWww := hasPrefix $host "www." -}}
+# Erzeugt aus assets/htaccess.tmpl -- Änderungen dort vornehmen, nicht hier.
+# Umgebung: {{ hugo.Environment }} ({{ $host }})
+
+RewriteEngine On
+RewriteBase /
+
+ErrorDocument 404 /404.html
+
+# Der Server schickte bisher "Content-Type: text/html" ohne charset. Wer sich
+# darauf verlässt statt auf das <meta charset> im Dokument -- Vorschau-Bots,
+# Feedleser, ältere Parser -- las "Über" als Latin-1.
+AddDefaultCharset UTF-8
+
+# ---------------------------------------------------------------------------
+# Auf die kanonische Schreibweise der Adresse umleiten.
+{{ if $wantsWww }}# Diese Auslieferung läuft mit www, also die Form ohne www dorthin schicken.
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+{{ else }}# Diese Auslieferung läuft ohne www, also das www entfernen.
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+{{ end }}
+# %{HTTP_HOST} statt eines festen Namens: so gilt die Regel für beide
+# Auslieferungen und kann nicht auf die jeweils andere Adresse zeigen.
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ---------------------------------------------------------------------------
+# Adressen, die es früher gab.
+#
+# Bis zum Umstieg auf rsync --delete (September 2026) blieb auf dem Server
+# alles liegen, was dort je hochgeladen wurde -- auch Seiten unter ihrer alten
+# Adresse. Beide unten waren dadurch über ein Jahr lang parallel erreichbar:
+#
+#   /über/    Slug der Über-Seite von Mai 2025 bis Juli 2026 (Commit 2162119
+#             änderte ihn auf "ueber")
+#   /contact/ hieß die Kontaktseite bis Mai 2026 (Commit d1866f4 benannte
+#             content/contact.md in kontakt.md um)
+#
+# %{REQUEST_URI} statt des Musters der RewriteRule, weil dort der Pfad schon
+# dekodiert ankommt und der Umlaut je nach Server unterschiedlich geschrieben
+# wird.
+# ---------------------------------------------------------------------------
+RewriteCond %{REQUEST_URI} ^/(%C3%BCber|über)/?$ [NC]
+RewriteRule ^ /ueber/ [R=301,L]
+
+RewriteRule ^contact/?$ /kontakt/ [R=301,L]
+
+# Die Präsenz-Seite ist im September 2026 in die Arbeitsweise-Seite gewandert
+# und steht dort als eigener Abschnitt. Das Sprungziel ist der Anker an der
+# Überschrift (content/arbeitsweise.md: "{#praesenz}" bzw. "{#presence}").
+#
+# NE (noescape) ist hier zwingend: ohne das Flag schreibt Apache die Raute
+# als %23 in den Location-Header, und der Browser landet auf einer Adresse,
+# die es nicht gibt, statt auf dem Abschnitt.
+RewriteRule ^praesenz/?$ /arbeitsweise/#praesenz [R=301,L,NE]
+RewriteRule ^en/presence/?$ /en/principles/#presence [R=301,L,NE]
+
+# Die englische Fassung der Berührungs-Gruppe hieß bis September 2026
+# „Touches in Silence". „Silence" heißt im Englischen nur, dass niemand
+# spricht; gemeint ist aber der Zustand, den Boxhall „stillness" nennt --
+# so heißt auch seine eigene Website. Die deutsche Adresse
+# (/gruppen/beruehrungen-in-stille/) bleibt unverändert, weil „Stille" im
+# Deutschen beides abdeckt.
+RewriteRule ^en/groups/touches-in-silence/?$ /en/groups/touches-in-stillness/ [R=301,L]
+
+ExpiresActive On
+ExpiresByType font/woff2  "access plus 1 year"
+ExpiresByType image/* "access plus 4 months"
+
+Header set Content-Security-Policy "frame-ancestors 'self'; base-uri 'self'; default-src 'none'; img-src 'self' data:; font-src 'self' data:; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self';"
+
+Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+Header set X-Content-Type-Options "nosniff"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set X-XSS-Protection "1; mode=block"
+Header set Referrer-Policy "no-referrer"
+
+Header set X-Robots-Tag "noimageindex"
+
+# webp/avif ergänzt: seit der Bildaufbereitung durch Hugo werden die Fotos
+# überwiegend als WebP ausgeliefert und fielen sonst aus dieser Regel heraus.
+<FilesMatch "\.(png|jpg|jpeg|webp|avif|svg)$">
+	Header set X-Robots-Tag "noindex, noarchive, nosnippet"
+</FilesMatch>
+
+# Hier stand ein X-Robots-Tag "noindex" für /kontakt/ und /en/contact/. Es ist
+# im September 2026 entfernt worden, weil es nie gewirkt hat: static/robots.txt
+# sperrt beide Adressen per Disallow, also ruft Google sie gar nicht erst ab
+# und bekommt den Header nie zu sehen. Beides zusammen hob sich auf und tauchte
+# in der Search Console als "Discovered - currently not indexed" auf.
+#
+# Die Sperre bleibt in robots.txt, der Header entfällt. Die vier gesperrten
+# Seiten stehen zusätzlich nicht mehr im Sitemap (sitemap.disable im Front
+# Matter von kontakt.md, kontakt.en.md, datenschutz.md, datenschutz.en.md) --
+# sie dort aufzuführen und gleichzeitig zu sperren, war der Widerspruch.
+#
+# Wer sie wirklich aus dem Index bekommen will, muss umgekehrt vorgehen: die
+# Disallow-Zeilen streichen, damit der noindex-Header gelesen werden kann.
+
+# ---------------------------------------------------------------------------
+# Cache-Control
+#
+# Hugo hängt an CSS und JS den SHA-256 ihres Inhalts (fingerprint) und an die
+# skalierten Bildfassungen den Verarbeitungs-Hash (see_hu_4e3271702b306e7c.webp).
+# Diese Namen ändern sich mit jeder Änderung des Inhalts, die Dateien können
+# also dauerhaft im Browser bleiben. Ohne diese Regeln liefert der Server für
+# CSS/JS max-age=604800 -- also wöchentlich ein Revalidierungs-Roundtrip pro
+# Datei, obwohl sich unter der Adresse nie etwas ändern kann.
+#
+# Die Header-Zeilen stehen bewusst nach ExpiresByType weiter oben: mod_headers
+# läuft später und überschreibt das von mod_expires gesetzte max-age.
+# ---------------------------------------------------------------------------
+<FilesMatch "\.[0-9a-f]{64}\.(css|js)$">
+	Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+
+<FilesMatch "_hu_[0-9a-f]+\.(jpg|jpeg|png|webp|avif|gif)$">
+	Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+
+# HTML dagegen liegt unter stabilen Adressen und muss bei jedem Aufruf
+# nachgefragt werden; bisher gab der Server dafür gar kein Cache-Control mit,
+# der Browser hat die Frist also geraten.
+<FilesMatch "\.html$">
+	Header set Cache-Control "public, max-age=0, must-revalidate"
+</FilesMatch>
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php72” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php72 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

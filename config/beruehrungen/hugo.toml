@@ -1,0 +1,10 @@
+# https://berührungen.com/
+#
+# Verzeichnisname ohne Umlaut, weil er als --environment auf der Kommandozeile
+# getippt wird.
+
+baseURL = "https://berührungen.com/"
+
+[params]
+  # Wird im Inhalt über {{< email >}} eingesetzt, siehe content/kontakt.md.
+  email = "moritz@berührungen.com"

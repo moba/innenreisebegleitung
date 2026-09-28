@@ -1,0 +1,17 @@
+{{ define "title" }}Moritz Bartl · {{ .Site.Params.info }}{{ end }}
+
+{{/* `home` schaltet in custom.css die bildschirmfüllende Startseite frei. */}}
+{{ define "bodyclass" }} home{{ end }}
+
+{{ define "content" }}
+{{- /* Die .htaccess wird aus assets/htaccess.tmpl erzeugt, weil zwei ihrer
+     Regeln von der Adresse abhängen (siehe Kommentar dort). Der Bau der
+     Startseite ist die einzige Stelle, die garantiert genau einmal je Sprache
+     läuft; `not .Site.LanguagePrefix` grenzt auf die Standardsprache ein, so
+     dass die Datei einmal im Wurzelverzeichnis landet und nicht noch einmal
+     unter /en/. */ -}}
+{{- if not .Site.LanguagePrefix -}}
+  {{- $htaccess := resources.Get "htaccess.tmpl" | resources.ExecuteAsTemplate ".htaccess" . -}}
+  {{- $htaccess.Publish -}}
+{{- end -}}
+{{ partial "home.html" . }} {{ end }}

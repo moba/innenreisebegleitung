@@ -1,0 +1,117 @@
+# Gemeinsame Einstellungen beider Auslieferungen.
+#
+# Die Website geht an zwei Adressen online. Alles, was sich dabei
+# unterscheidet, steht in config/beruehrungen/ bzw. config/innenreise/; Hugo
+# legt das Verzeichnis der gewählten Umgebung über dieses hier:
+#
+#   hugo --environment beruehrungen   ->  https://berührungen.com/
+#   hugo --environment innenreise     ->  https://www.innenreisebegleitung.de/
+#
+# ./publish.sh baut und überträgt beide nacheinander. Es gibt bewusst keine
+# Vorgabe: ohne --environment fehlt die baseURL und der Bau schlägt fehl,
+# statt versehentlich die falsche Adresse zu verteilen.
+
+canonifyURLs = true
+
+# Datum der letzten Änderung aus der Git-Historie ziehen. Ohne das trägt keine
+# Seite ein Datum, und das Sitemap kommt ohne <lastmod> -- Google erfährt dann
+# nicht, was sich seit dem letzten Besuch geändert hat. Setzt voraus, dass die
+# Inhaltsdateien eingecheckt sind; nicht versionierte Dateien bekommen kein
+# Datum.
+enableGitInfo = true
+
+# Nicht gebraucht: Taxonomien (keine Tags, keine Kategorien), RSS und die von
+# Hugo erzeugte robots.txt -- die steht von Hand in static/robots.txt.
+#
+# "section" stand hier ebenfalls, solange die Website aus lauter Einzelseiten
+# bestand. Seit content/gruppen/ ein Verzeichnis mit _index.md und Unterseiten
+# ist, muss die Übersichtsseite gebaut werden: sonst gäbe es zwar
+# /gruppen/<name>/, aber /gruppen/ selbst wäre ein 404.
+disableKinds = ["taxonomy", "term", "RSS", "robotsTXT"]
+
+defaultContentLanguage = "de"
+# Deutsch bleibt unter "/", Englisch liegt unter "/en/".
+defaultContentLanguageInSubdir = false
+disableHugoGeneratorInject = "true"
+
+# sectionPagesMenu stand hier und hätte, seit es mit content/gruppen/ ein
+# Verzeichnis gibt, dessen Übersichtsseite ein zweites Mal ins Hauptmenü
+# gehängt -- einmal automatisch, einmal über den menus-Eintrag im Front
+# Matter. Alle Seiten dieser Website tragen ihren Menüeintrag selbst im Front
+# Matter, deshalb ist die automatische Variante hier raus.
+
+title = "Moritz Valentin Bartl"
+
+# Bilder aus static/ zusätzlich ins assets-Dateisystem einhängen, damit
+# Render-Hooks (layouts/_default/_markup/render-image.html) ihre Abmessungen
+# auslesen können. Sobald es eigene Mounts mit target = "assets" gibt, entfällt
+# der Standard-Mount assets -> assets, deshalb steht er hier explizit.
+[[module.mounts]]
+  source = "assets"
+  target = "assets"
+
+[[module.mounts]]
+  source = "static"
+  target = "assets"
+
+# Statt `theme = "hugo-coder"`, weil das Theme sonst sein komplettes
+# static/fonts mitliefert: 1,1 MB Fork-Awesome in fünf Formaten, die seit dem
+# Ausbau der Icon-Schrift (siehe assets/scss/coder.scss) niemand mehr abruft.
+# Die übrigen Mounts sind die Hugo-Standardzuordnungen und müssen mit
+# aufgezählt werden, sobald es für ein Modul eigene Mounts gibt.
+[[module.imports]]
+  path = "hugo-coder"
+
+  [[module.imports.mounts]]
+    source = "static"
+    target = "static"
+    files = "!/fonts/**"
+
+  [[module.imports.mounts]]
+    source = "layouts"
+    target = "layouts"
+
+  [[module.imports.mounts]]
+    source = "assets"
+    target = "assets"
+
+  [[module.imports.mounts]]
+    source = "i18n"
+    target = "i18n"
+
+  [[module.imports.mounts]]
+    source = "data"
+    target = "data"
+
+  [[module.imports.mounts]]
+    source = "archetypes"
+    target = "archetypes"
+
+[params]
+# `info` und `description` sind sprachabhängig, siehe languages.toml.
+# `email` steht pro Umgebung in deren hugo.toml und wird im Inhalt über den
+# Shortcode {{< email >}} eingesetzt (layouts/shortcodes/email.html).
+favicon_32 = "images/favicon-32x32.png"
+favicon_16 = "images/favicon-16x16.png"
+
+avatarURL = "images/moritz-v2.jpg"
+customCSS = ["css/custom.css"]
+customJS = ["js/custom.js"]
+
+author = "Moritz Valentin Bartl"
+
+# Vorschaubild beim Teilen in sozialen Medien (Startseite und alle Seiten ohne
+# eigenen `images`-Eintrag im Front Matter). 1200x630, zugeschnitten aus
+# static/images/seamless-rim-border-...-772282585.jpg
+images = ["images/social/blumen.jpg"]
+
+colorScheme = "auto"
+hideColorSchemeToggle = "true"
+
+[params.meta]
+keywords = ""
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+  unsafe = true

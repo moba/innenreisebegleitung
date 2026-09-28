@@ -1,0 +1,10 @@
+# „Innenreisebegleitung" bleibt auch in der englischen Fassung stehen -- der
+# Begriff ist der Name, nicht eine Beschreibung, und wird nicht übersetzt.
+
+[de.params]
+  info = "Innenreisebegleitung"
+  description = "Moritz Valentin Bartl. Innenreisebegleitung."
+
+[en.params]
+  info = "Innenreisebegleitung"
+  description = "Moritz Valentin Bartl. Innenreisebegleitung."
