@@ -132,6 +132,17 @@ RewriteRule ^en/presence/?$ /en/principles/#presence [R=301,L,NE]
 # Deutschen beides abdeckt.
 RewriteRule ^en/groups/touches-in-silence/?$ /en/groups/touches-in-stillness/ [R=301,L]
 
+# Die Heilpraktiker-Seite hieß bis September 2026 /heilpraktiker/ bzw.
+# /en/why-not-a-therapist/. Beide Adressen sagten das Gegenteil dessen, was
+# dort steht: die Seite begründet, warum ich keiner bin.
+#
+# Hugo legt an den alten Adressen zusätzlich Alias-Seiten mit meta-refresh an
+# (`aliases` im Front Matter von content/heilpraktiker.md und
+# heilpraktiker.en.md). Die Regeln hier greifen vorher; die Alias-Seiten
+# bleiben als Rückfall, falls .htaccess einmal nicht ausgewertet wird.
+RewriteRule ^heilpraktiker/?$ /kein-heilpraktiker/ [R=301,L]
+RewriteRule ^en/why-not-a-therapist/?$ /en/why-i-am-not-a-therapist/ [R=301,L]
+
 ExpiresActive On
 ExpiresByType font/woff2  "access plus 1 year"
 ExpiresByType image/* "access plus 4 months"

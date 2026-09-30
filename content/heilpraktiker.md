@@ -1,6 +1,7 @@
 ---
 title: "Heilpraktiker oder Psychotherapeut?"
-slug: "heilpraktiker"
+slug: "kein-heilpraktiker"
+aliases: ["/heilpraktiker/"]
 draft: false
 images: ["images/social/blumen.jpg"]
 #menus:

@@ -1,6 +1,7 @@
 ---
 title: "Heilpraktiker or psychotherapist?"
-slug: "why-not-a-therapist"
+slug: "why-i-am-not-a-therapist"
+aliases: ["/why-not-a-therapist/"]
 draft: false
 images: ["images/social/blumen.jpg"]
 #menus:
