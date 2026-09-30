@@ -58,7 +58,7 @@ Beispiele:
 
 **Sprache statt Erklärung.** Gedichte und Liedzeilen, Buchzitate, Sätze, die Dich persönlich bewegen.
 
-**Stille Aufstellung.** Ohne Worte, nur Gesten und Bewegungen. Kann sehr tief berühren.
+**Stille Aufstellung.** Ohne Worte, nur Gesten und Bewegungen. Es spricht nur der Anliegeneinbringer, darüber was es in ihm auslöst. Kann sehr tief berühren.
 
 Die Quellen für diese Inspirationen stehen unten.
 
