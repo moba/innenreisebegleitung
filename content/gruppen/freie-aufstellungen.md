@@ -96,11 +96,9 @@ Nicht geeignet ist das hier, wenn Du in einer akuten Krise steckst und Halt brau
 
 ## Wie es losgeht
 
-Die Gruppe beginnt, sobald sich einige Menschen gefunden haben. Vorher lege ich keine Termine fest.
+Wann wir uns treffen, wo, und in welchen Abständen, entscheiden wir als Gruppe gemeinsam. Die Gruppe trägt sich selbst; dann gehört ihr auch der Kalender.
 
-Wann wir uns treffen und in welchen Abständen, entscheiden wir danach gemeinsam – nicht ich im Voraus. Es soll eine Gruppe sein, die sich selbst trägt; dann gehört ihr auch der Kalender.
-
-Wenn Du dabei sein möchtest, [melde Dich bei mir]({{< ref "kontakt.md" >}}). Schreib gern dazu, was Dich herbringt. Ich sage Bescheid, sobald wir genug sind.
+Wenn Du dabei sein möchtest, [melde Dich bei mir]({{< ref "kontakt.md" >}}). Schreib gern dazu, was Dich herbringt.
 
 ---
 

@@ -13,7 +13,7 @@ images: ["images/social/wurzelkinder.jpg"]
 
 Some things cannot be practised alone. Being there, for instance, without doing anything. For that you need someone sitting across from you.
 
-I would like to bring together a group to practise exactly that. Not a course where one person stands at the front and the others learn. A group where we take turns giving and receiving, and where nobody knows more than anyone else.
+In this group, this is what we explore together. Not a course where one person stands at the front and the others learn. A group where we take turns giving and receiving, and where nobody knows more than anyone else.
 
 ## The empty chair
 
@@ -80,11 +80,9 @@ It helps if you expect little to happen. From the outside this work looks like a
 
 ## How it starts
 
-The group begins as soon as a few people have found each other.
+When and where we meet and how often we decide together. The group carries itself; then the calendar belongs to it too.
 
-When we meet and how often we decide together afterwards -- not me in advance. It is meant to be a group that carries itself; then the calendar belongs to it too.
-
-If you would like to be part of it, [get in touch]({{< ref "kontakt.md" >}}). Do say what brings you. I will let you know as soon as there are enough of us.
+If you would like to be part of it, [get in touch]({{< ref "kontakt.md" >}}). You're welcome to share what led you here.
 
 ---
 

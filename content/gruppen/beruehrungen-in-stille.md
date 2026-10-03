@@ -10,7 +10,7 @@ images: ["images/social/wurzelkinder.jpg"]
 
 Manches lässt sich allein nicht üben. Da zu sein zum Beispiel, ohne etwas zu machen. Dafür braucht es jemanden, der einem gegenübersitzt.
 
-Ich möchte eine Gruppe zusammenbringen, in der wir genau das miteinander üben. Kein Kurs, in dem einer vorne steht und die anderen lernen. Eine Gruppe, in der wir abwechselnd geben und empfangen, und in der niemand mehr weiß als die anderen.
+Diese Gruppe bietet uns Gelegenheit, genau das miteinander zu üben. Kein Kurs, in dem einer vorne steht und die anderen lernen. Eine Gruppe, in der wir abwechselnd geben und empfangen, und in der niemand mehr weiß als die anderen.
 
 ## Der leere Stuhl
 
@@ -79,11 +79,9 @@ Es hilft, wenn Du damit rechnest, dass wenig passiert. Von außen sieht diese Ar
 
 ## Wie es losgeht
 
-Die Gruppe beginnt, sobald sich einige Menschen gefunden haben.
+Wann wir uns treffen, wo, und in welchen Abständen, entscheiden wir als Gruppe gemeinsam. Die Gruppe trägt sich selbst; dann gehört ihr auch der Kalender.
 
-Wann wir uns treffen und in welchen Abständen, entscheiden wir danach gemeinsam – nicht ich im Voraus. Es soll eine Gruppe sein, die sich selbst trägt; dann gehört ihr auch der Kalender.
-
-Wenn Du dabei sein möchtest, [melde Dich bei mir]({{< ref "kontakt.md" >}}). Schreib gern dazu, was Dich herbringt. Ich sage Bescheid, sobald wir genug sind.
+Wenn Du dabei sein möchtest, [melde Dich bei mir]({{< ref "kontakt.md" >}}). Schreib gern dazu, was Dich herbringt.
 
 ---
 

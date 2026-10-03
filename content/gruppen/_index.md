@@ -19,6 +19,6 @@ Was allein schwer zu üben ist, geht zu mehreren leichter. Und manches lässt si
 
 **[Freie Aufstellungen]({{< ref "gruppen/freie-aufstellungen.md" >}})** – Das Anliegen formuliert allein, wer aufstellt; von außen kommt so wenig wie möglich. Für Menschen, die selbst aufstellen, und für alle, die das Format noch nicht kennen.
 
-Beide beginnen, sobald sich genug Menschen gefunden haben. Termine legen wir dann gemeinsam fest.
+Termine legen wir in der jeweiligen Gruppe gemeinsam fest.
 
 ---

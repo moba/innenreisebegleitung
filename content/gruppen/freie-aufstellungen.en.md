@@ -99,17 +99,19 @@ This is not the right place if you are in an acute crisis and need holding. A gr
 
 ## How it starts
 
-The group begins as soon as a few people have found each other. Before that I set no dates.
+When and where we meet and how often we decide together. The group carries itself; then the calendar belongs to it too.
 
-When we meet and how often we decide together afterwards – not me in advance. It is meant to be a group that carries itself; then the calendar belongs to it too.
-
-If you would like to be part of it, [get in touch]({{< ref "kontakt.md" >}}). Do say what brings you. I will let you know as soon as there are enough of us.
+If you would like to be part of it, [get in touch]({{< ref "kontakt.md" >}}). You're welcome to share what led you here.
 
 ---
 
 _»Find yourselves a good place in the whole. Be free.«_
 
 Most of the following is available in German only.
+
+[Jakob Robert Schneider: Family Constellations](https://www.carl-auer.com/product/family-constellations/)
+
+[Francesca Mason Boring: Connecting to Our Ancestral Past](https://www.northatlanticbooks.com/shop/connecting-to-our-ancestral-past/)
 
 [Franz Ruppert: Identity-oriented Psychotrauma Theory and Therapy (IoPT)](https://www.franz-ruppert.de/)
 
@@ -125,13 +127,9 @@ Most of the following is available in German only.
 
 [Christl Lieben, Vienna](https://christl-lieben.com/)
 
-[Francesca Mason Boring: Connecting to Our Ancestral Past](https://www.northatlanticbooks.com/shop/connecting-to-our-ancestral-past/)
-
 [Daan van Kampenhout: Systemic Rituals](https://www.daanvankampenhout.com/)
 
 [Gunther Schmidt, Milton Erickson Institut Heidelberg](https://www.meihei.de/)
-
-[Jakob Robert Schneider: Family Constellations](https://www.carl-auer.com/product/family-constellations/)
 
 [Praxis der Systemaufstellung](https://www.praxis-der-systemaufstellung.de/)
 

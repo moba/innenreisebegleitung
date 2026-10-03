@@ -26,6 +26,6 @@ What is hard to practise alone goes more easily with others. And some things can
 
 **[Free-Form Constellations]({{< ref "gruppen/freie-aufstellungen.md" >}})** – The intention is formulated by the person bringing it, and as little as possible comes from outside. For people who facilitate constellations themselves, and for anyone who does not yet know the format and is curious to explore.
 
-Both begin as soon as enough people have found each other. We then set the dates together.
+Dates are set together within each group.
 
 ---
