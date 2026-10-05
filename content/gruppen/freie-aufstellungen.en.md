@@ -111,6 +111,8 @@ Most of the following is available in German only.
 
 [Jakob Robert Schneider: Family Constellations](https://www.carl-auer.com/product/family-constellations/)
 
+[Sarah Peyton: Emergent Constellations & Resonant Healing](https://sarahpeyton.com/)
+
 [Francesca Mason Boring: Connecting to Our Ancestral Past](https://www.northatlanticbooks.com/shop/connecting-to-our-ancestral-past/)
 
 [Franz Ruppert: Identity-oriented Psychotrauma Theory and Therapy (IoPT)](https://www.franz-ruppert.de/)

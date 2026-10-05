@@ -22,7 +22,7 @@ Diese Prinzipien gelten für mich, und in Gruppen als gemeinsame Vereinbarung.
 
 ## Willkommen
 
-Du bist willkommen, so wie Du heute kommst. Auch die Teile von Dir, die lieber nicht gekommen wären. Auch die Müdigkeit, der Ärger, die Skepsis, die Verwirrung, die Überforderung, die Unaushaltbarkeit. Auch die Teile, die sich verstecken und gar nicht zeigen wollen. Ich picke mir nicht die angenehmen Seiten heraus und arbeite nur mit denen. Du musst auch kein „Anliegen" mitbringen. Du kannst. Wir müssen noch nichtmal sprechen, während Du hier bist.
+Du bist willkommen, so wie Du heute kommst. Auch die Teile von Dir, die lieber nicht gekommen wären. Auch die Erschöpfung, der Ärger, die Skepsis, die Verwirrung, die Überforderung, die Unaushaltbarkeit. Auch die Teile, die sich verstecken und gar nicht zeigen wollen. Ich picke mir nicht die angenehmen Seiten heraus und arbeite nur mit denen. Du musst auch kein „Anliegen" mitbringen. Du kannst. Wir müssen noch nichtmal sprechen, während Du hier bist.
 
 Willkommen zu sein ist keine Höflichkeit. Es ist etwas, das Menschen von Anfang an brauchen. Und das vielen von uns nicht gegeben wurde.
 

@@ -22,7 +22,7 @@ I want to always be guided by these principles; in groups, they serve as a mutua
 
 ## Welcome
 
-You are welcome exactly as you arrive today. That includes the parts of you that would rather not have come here. The tiredness, the anger, the skepticism, the confusion, the overwhelm, that which feels impossible to bear. Even the parts that hide and don’t want to show themselves at all. I don’t cherry-pick the pleasant sides and work with those. You don’t have to bring an “intention” with you either. You can. We don't even have to talk while you're here.
+You are welcome exactly as you arrive today. That includes the parts of you that would rather not have come here. The exhaustion, the anger, the skepticism, the confusion, the overwhelm, that which feels impossible to bear. Even the parts that hide and don’t want to show themselves at all. I don’t cherry-pick the pleasant sides and work with those. You don’t have to bring an “intention” with you either. You can. We don't even have to talk while you're here.
 
 Being welcome is not a courtesy. It is something we all need from the very beginning. And something many of us did not get.
 
