@@ -13,7 +13,7 @@ menus:
 * Integration prä- und perinataler Erfahrungen (in Ausbildung)
 * Empathisches Coaching auf Basis Gewaltfreier Kommunikation (GFK)
 * Identitätsorientierte Psychotraumatheorie und Arbeiten mit der Anliegenmethode (IoPT)
-* Begleitung bei der Begegnung mit inneren Anteilen (Ego States, innere Familie)
+* [Begleitung bei der Begegnung mit inneren Anteilen]({{< ref "traumasensibles-coaching.md" >}}) (Ego States, innere Familie)
 * Prozess- und Embodimentfokussierte Psychologie (PEP®)
 * Struktur- und Organisations[aufstellungen]({{< ref "gruppen/freie-aufstellungen.md" >}})
 * [Angeleitetes Körperspüren]({{< ref "koerperspueren.md" >}}), Craniosakral-Selbstbehandlungen

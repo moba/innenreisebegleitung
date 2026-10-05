@@ -14,7 +14,7 @@ menus:
 * integration of pre- and perinatal experiences (in training)
 * empathic coaching based on Nonviolent Communication (NVC)
 * Identity-oriented Psychotrauma Theory and work with the intention method (IoPT)
-* accompanying you as you meet your inner parts (ego states, inner family)
+* [accompanying you as you meet your inner parts]({{< ref "traumasensibles-coaching.md" >}}) (ego states, inner family)
 * Process and Embodiment focused Psychology (PEP®)
 * structural and organisational [constellations]({{< ref "gruppen/freie-aufstellungen.md" >}}) 
 * [guided body awareness]({{< ref "koerperspueren.md" >}}) and craniosacral self-treatments
