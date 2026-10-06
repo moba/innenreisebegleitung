@@ -16,6 +16,8 @@ menus:
 
 Getting to know each other and the first session are free of charge. Everything beyond that by individual arrangement.
 
+> ![](/images/house.svg "img-tiny") Counseling practice in Munich Arabellapark (Bogenhausen)
+> 
 > ![](/images/phone.svg "img-tiny") Phone: {{< tel number="+498920007262" >}}+49 89 2000 7262{{</ tel >}}
 >
 > ![](/images/email.svg "img-tiny") Email: {{< email >}}
@@ -24,7 +26,7 @@ Getting to know each other and the first session are free of charge. Everything 
 > 
 > ![](/images/linkedin.svg "img-tiny") LinkedIn: [moritzbartl](https://www.linkedin.com/in/moritzbartl/)
 > 
-> ![](/images/envelope.svg "img-tiny") Moritz Bartl c/o Traum und Verantwortung e.V., Werinherstr. 3, 81451 München, Germany
+> ![](/images/envelope.svg "img-tiny") Moritz Bartl c/o Traum und Verantwortung e.V., Werinherstr. 3, D-81451 Munich
 
 [Code of ethics of the Craniosacral Verband Deutschland (CSVD)](/ethikcodex-csvd.pdf) (in German)
 

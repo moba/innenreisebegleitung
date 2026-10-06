@@ -2,26 +2,6 @@
     width: 44rem;
 }
 
-/* ---------------------------------------------------------------------------
-   Startseite (body.home): passt ohne Scrollen auf einen Bildschirm.
-
-   Zwei Punkte sind dafür nötig:
-
-   1. Höhenbezug. `100vh` ist auf Mobilgeräten die Höhe *ohne* Browserleisten;
-      eine Seite mit `min-height: 100vh` scrollt dort also selbst dann, wenn
-      der Inhalt passt. `100svh` (small viewport height) ist die Höhe *mit*
-      sichtbaren Leisten und damit das, was tatsächlich zu sehen ist. Die
-      `vh`-Zeile davor bleibt als Fallback für alte Browser stehen.
-
-   2. Bildhöhe. Das Avatarbild bekommt die Höhe, die nach Navigation, Name,
-      Untertitel und den Abständen übrig bleibt: `--home-reserved`. Da für das
-      Bild nur `width` und `max-height` gesetzt sind, skaliert der Browser es
-      seitenverhältnisgetreu — je nach Bildschirm begrenzt also die Breite oder
-      die Höhe. `--home-reserved` ist im Browser ausgemessen (Navigation 6rem +
-      Überschriften + Abstände) und muss nachgezogen werden, wenn sich
-      Schriftgrößen oder Abstände der Startseite ändern.
-   --------------------------------------------------------------------------- */
-
 body.home {
     --home-reserved: 20.5rem;
 }
@@ -40,7 +20,8 @@ body.home .avatar img {
 
 /* Hochformat und kleine Bildschirme: Abstände zusammenziehen, damit möglichst
    viel Höhe beim Bild landet. */
-@media only screen and (max-width: 768px), only screen and (orientation: portrait) {
+@media only screen and (max-width: 768px),
+    only screen and (orientation: portrait) {
     body.home {
         --home-reserved: 17rem;
     }
@@ -83,7 +64,8 @@ img {
     -webkit-filter: grayscale(100%);
     transition: filter 30s ease;
 }
-img.colored, img:hover {
+img.colored,
+img:hover {
     filter: grayscale(10%);
     -webkit-filter: grayscale(10%);
     transition: filter 3s ease;
@@ -105,21 +87,30 @@ img.colored, img:hover {
     transition: none;
 }
 .external-link {
-	text-decoration: underline;
-	color: #000000;
-}
-body.colorscheme-dark a {
-	color: #ffffff;
+    text-decoration: underline;
+    color: #000000;
 }
 body.colorscheme-dark .img-tiny {
-	filter: invert(100%);
+    filter: invert(100%);
 }
 .navigation-list .language-link {
     text-transform: uppercase;
 }
-h1 { font-size: calc(2em * 0.6); }
-h2 { font-size: calc(1.5em * 0.7); }
-h3 { font-size: calc(1.17em * 0.6); }
-h4 { font-size: calc(1em * 0.6); }
-h5 { font-size: calc(0.83em * 0.6); }
-h6 { font-size: calc(0.67em * 0.6); }
+h1 {
+    font-size: calc(2em * 0.6);
+}
+h2 {
+    font-size: calc(1.5em * 0.7);
+}
+h3 {
+    font-size: calc(1.17em * 0.6);
+}
+h4 {
+    font-size: calc(1em * 0.6);
+}
+h5 {
+    font-size: calc(0.83em * 0.6);
+}
+h6 {
+    font-size: calc(0.67em * 0.6);
+}

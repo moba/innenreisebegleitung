@@ -16,6 +16,8 @@ menus:
 
 Kennenlernen und erste Sitzung kostenfrei. Alles Weitere nach Absprache.
 
+> ![](/images/house.svg "img-tiny") Praxis in München Arabellapark (Bogenhausen)
+> 
 > ![](/images/phone.svg "img-tiny") Telefon: {{< tel number="+498920007262" >}}089 / 2000 - 7262{{</ tel >}}
 >
 > ![](/images/email.svg "img-tiny") Email: {{< email >}}
@@ -24,7 +26,7 @@ Kennenlernen und erste Sitzung kostenfrei. Alles Weitere nach Absprache.
 > 
 > ![](/images/linkedin.svg "img-tiny") LinkedIn: [moritzbartl](https://www.linkedin.com/in/moritzbartl/)
 > 
-> ![](/images/envelope.svg "img-tiny") Moritz Bartl c/o Traum und Verantwortung e.V., Werinherstr. 3, 81451 München
+> ![](/images/envelope.svg "img-tiny") Post: Moritz Bartl c/o Traum und Verantwortung e.V., Werinherstr. 3, 81451 München
 
 [Ethikrichtlinien Craniosacral Verband Deutschland (CSVD)](/ethikcodex-csvd.pdf)
 
