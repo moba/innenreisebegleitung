@@ -21,7 +21,7 @@ _The challenge is to create accessible frameworks in which people living with th
 
 _By strengthening their ability to self-regulate and helping them learn to respond to their trauma-related symptoms with a sense of agency, their journeys of suffering can also be shortened. […]_
 
-_The term “trauma-informed” has no clear definition. Inspired by the US National Center for Trauma-Informed Care, I understand the term as follows: Being trauma-informed means understanding that trauma exists, being able to recognize trauma and its aftereffects, knowing how to manage them, and avoiding retraumatization.”_
+_The term “trauma-informed” has no clear definition. Inspired by the [US] National Center for Trauma-Informed Care, I understand the term as follows: Being trauma-informed means understanding that trauma exists, being able to recognize trauma and its aftereffects, knowing how to manage them, and avoiding retraumatization.”_
 
 > Verena König: *"Traumasensibles Coaching mit Ego-States –
 Wie wir die Arbeit mit Ego-States niedrigschwellig und sicher

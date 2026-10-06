@@ -20,7 +20,7 @@ _Die Herausforderung besteht darin, mit niedrigschwelligen Konzepten Rahmenwerke
 
 _Indem ihre Fähigkeiten zur Selbstregulation gestärkt werden und sie lernen, ihren Traumafolgesymptomen selbstwirksam zu begegnen, verkürzen sich zudem ihre Leidenswege. […]_
 
-_Der Begriff »traumasensibel« unterliegt keiner klaren Definition. Ich verwende ihn, inspiriert vom US National Center for Trauma-Informed Care, folgendermaßen: Traumasensibel zu sein bedeutet, um die Existenz von Trauma zu wissen, Trauma und Traumafolgen erkennen zu können, damit umgehen zu können und Retraumatisierungen zu vermeiden.“_
+_Der Begriff »traumasensibel« unterliegt keiner klaren Definition. Ich verwende ihn, inspiriert vom [US] National Center for Trauma-Informed Care, folgendermaßen: Traumasensibel zu sein bedeutet, um die Existenz von Trauma zu wissen, Trauma und Traumafolgen erkennen zu können, damit umgehen zu können und Retraumatisierungen zu vermeiden.“_
 
 > Verena König: *"Traumasensibles Coaching mit Ego-States –
 Wie wir die Arbeit mit Ego-States niedrigschwellig und sicher
