@@ -30,6 +30,10 @@ I borrow from several approaches without following any of them entirely.
 
 **Giving feelings room.** Raja Selvam starts from the idea that feelings are not overwhelming because they are too big, but because they are spread across too little body. His work consists of giving them more room — with attention, breath, movement, one's own touch — rather than explaining them or getting rid of them. Like a heavy weight spread over a larger surface.
 
+**Going with the protection, not against it.** Staci Haines calls this *blending*, a term she takes from aikido: not working against a contraction but becoming curious about it and then supporting it in the direction it is already going. A hard belly, a held breath, a shoulder drawn up — in her reading these are not faults to be corrected but a *safety shaping*, something the body organized long ago in order to protect something, and that is still doing that work today. Told to open up, it reads that as a threat and tightens further. Asked instead what it is made of — hard like metal or like wood, how dense, how much room does it take up, how long has it been doing this, what is it taking care of — and then supported rather than opposed, the tissue begins to soften on its own.
+
+Haines writes for people who accompany others professionally, and she writes politically: her subject is the violence of racism, sexism and poverty, not just private injuries. What I take from her is the attitude, not a technique.
+
 **The felt something.** From Focusing, as developed by Eugene Gendlin, comes the patience for what does not yet have a name: that indefinite something in the belly or the chest which is unclear at first and clarifies if you give it time instead of naming it straight away. Gendlin stands behind the way I work more generally; there is more about that on the [Principles]({{< ref "arbeitsweise.md" >}}) page.
 
 ## When something comes up
@@ -57,6 +61,8 @@ The books by Agustoni and Harms are available in German only.
 [Thomas Harms: Verkörperte Bindung. Attachment-oriented Body Psychotherapy (BKPT)](https://www.penguin.de/buecher/thomas-harms-verkoerperte-bindung/buch/9783466348534)
 
 [Raja Selvam: The Practice of Embodying Emotions](https://integralsomaticpsychology.com/books/the-practice-of-embodying-emotions/) — on the method itself, [Integral Somatic Psychology](https://integralsomaticpsychology.com/)
+
+[Staci K. Haines: The Politics of Trauma. Somatics, Healing, and Social Justice](https://www.stacihaines.com/books) — blending is described in chapter 9, “Regenerating Safety”
 
 [Focusing, as developed by Eugene Gendlin](https://focusing.org/gendlincenter/what-focusing)
 

@@ -30,6 +30,10 @@ Ich bediene mich bei mehreren Ansätzen, ohne einem davon vollständig zu folgen
 
 **Gefühlen Platz geben.** Raja Selvam geht davon aus, dass Gefühle nicht deshalb überwältigend sind, weil sie zu groß wären, sondern weil sie auf zu wenig Körper verteilt sind. Seine Arbeit besteht darin, ihnen mehr Raum zu geben – mit Aufmerksamkeit, Atem, Bewegung, eigener Berührung –, statt sie zu erklären oder loszuwerden. Wie ein schweres Gewicht, das man auf mehr Fläche verteilt.
 
+**Mit dem Schutz gehen, nicht dagegen.** Staci Haines nennt das *blending*, in der deutschen Ausgabe *Einlassen* – ein Begriff aus dem Aikido: nicht gegen eine Anspannung arbeiten, sondern neugierig auf sie werden und sie in die Richtung stützen, in die sie ohnehin schon geht. Ein harter Bauch, ein angehaltener Atem, eine hochgezogene Schulter sind bei ihr keine Fehler, die man abstellt, sondern eine *Sicherheitsformung*: etwas, das der Körper vor langer Zeit eingerichtet hat, um etwas zu schützen, und das diese Arbeit bis heute tut. Wird ihr gesagt, sie solle sich öffnen, liest sie das als Bedrohung und zieht sich weiter zusammen. Wird sie stattdessen gefragt, woraus sie besteht – hart wie Metall oder wie Holz, wie dicht, wie viel Raum nimmt sie ein, wie lange macht sie das schon, worauf passt sie auf – und dann gestützt statt bekämpft, beginnt das Gewebe von selbst weicher zu werden.
+
+Haines schreibt für Menschen, die beruflich begleiten, und sie schreibt politisch: Ihr Thema ist die Gewalt von Rassismus, Sexismus und Armut, nicht nur die private Verletzung. Was ich von ihr übernehme, ist die Haltung, nicht eine Technik.
+
 **Das gefühlte Etwas.** Aus dem Focusing nach Eugene Gendlin kommt die Geduld für das, was noch keinen Namen hat: dieses unbestimmte Etwas im Bauch oder in der Brust, das erst unklar ist und sich klärt, wenn man ihm Zeit lässt, statt es sofort zu benennen. Gendlin steht auch sonst hinter dem, wie ich arbeite; auf der Seite [Arbeitsweise]({{< ref "arbeitsweise.md" >}}) steht mehr dazu.
 
 ## Wenn etwas hochkommt
@@ -55,6 +59,8 @@ Im Einzelnen, in Ruhe, ohne festen Umfang. [Melde Dich bei mir]({{< ref "kontakt
 [Thomas Harms: Verkörperte Bindung. Bindungsorientierte Körperpsychotherapie (BKPT)](https://www.penguin.de/buecher/thomas-harms-verkoerperte-bindung/buch/9783466348534)
 
 [Raja Selvam: Verkörperte Gefühle](https://www.penguin.de/buecher/raja-selvam-verkoerperte-gefuehle/buch/9783466348046) – zur Methode selbst die [Integral Somatic Psychology](https://integralsomaticpsychology.com/de/)
+
+[Staci K. Haines: Körper lügen nicht](https://wortenundmeer.net/buch/staci-k-haines-koerper-luegen-nicht/) – deutsch von Sharif Bitar, w_orten & meer 2024; im Original „The Politics of Trauma. Somatics, Healing, and Social Justice“. Das Einlassen steht in Kapitel 9 (im Original „Regenerating Safety“).
 
 [Focusing nach Eugene Gendlin](https://dg-e.de/focusing/)
 
