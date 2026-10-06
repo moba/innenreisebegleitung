@@ -21,4 +21,4 @@ menus:
  
 --- 
 
-[I am neither a physician, a *Heilpraktiker* nor a licensed psychotherapist.]({{< ref "heilpraktiker.md" >}}) I do not make diagnoses and I do not treat illnesses. My accompaniment is not a substitute for medical or psychotherapeutic treatment. I am glad to help you find suitable forms of therapy and suitable therapists. [*]({{< ref "heilpraktiker.md" >}} "Why I am not a Heilpraktiker or psychotherapist")
+[I am neither a physician, a *Heilpraktiker* nor a licensed psychotherapist.]({{< ref "heilpraktiker.md" >}}) I do not make diagnoses and I do not treat illnesses. My accompaniment is not a substitute for medical or psychotherapeutic treatment. I’m happy to support you in exploring appropriate treatment options and finding a therapist. [*]({{< ref "heilpraktiker.md" >}} "Why I am not a Heilpraktiker or psychotherapist")
