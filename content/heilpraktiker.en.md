@@ -31,7 +31,7 @@ And the Act on the Profession of Psychotherapist:
 
 *§1 PsychThG: “(1) Anyone wishing to practice psychotherapy under the professional title of ‘psychotherapist’ requires a license to practice as a ‘psychotherapist’. […] (2) The practice of psychotherapy within the meaning of this Act is any activity carried out professionally or on a regular basis by means of scientifically tested and recognized psychotherapeutic procedures or methods __for the purpose of diagnosing, curing or alleviating disorders of a pathological nature__ for which psychotherapy is indicated. […] Activities whose sole object is working through or overcoming social conflicts, or other purposes outside the practice of medicine, fall outside the practice of psychotherapy.”*
 
-do not diagnose or treat illnesses or 'disorders'. And I mean that. What matters to me is accompanying people through difficult and stressful phases of life, and taking their self-efficacy seriously. Simply as a fellow human being.
+I do not diagnose or treat illnesses or 'disorders'. And I mean that. What matters to me is accompanying people through difficult and stressful phases of life, and taking their self-efficacy seriously. Simply as a fellow human being.
 
 I wish for a society in which we *all regain* the capacities and skills to accompany one another in difficult and stressful situations (and afterwards). Person to person. Not “therapist” to “patient”. A society in which what I do, what I offer, becomes ordinary: loving, caring, mindful attention, open ears and an open heart for the life story of the person opposite me; slowing down from the pace of everyday life; forms of support that feel right, including touch. [*]({{< ref "#urteil" >}} "Court ruling on craniosacral therapy")
 
