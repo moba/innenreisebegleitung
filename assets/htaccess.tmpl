@@ -143,6 +143,13 @@ RewriteRule ^en/groups/touches-in-silence/?$ /en/groups/touches-in-stillness/ [R
 RewriteRule ^heilpraktiker/?$ /kein-heilpraktiker/ [R=301,L]
 RewriteRule ^en/why-not-a-therapist/?$ /en/why-i-am-not-a-therapist/ [R=301,L]
 
+# „Traumasensibel" ist bei Verena König die deutsche Entsprechung von
+# „trauma-informed" -- ihre Definition übernimmt die vier Grundannahmen des
+# National Center for Trauma-Informed Care. Die englische Fassung hieß bis
+# Oktober 2026 trotzdem „trauma-sensitive", also ein Fachbegriff, den es im
+# Englischen so nicht gibt.
+RewriteRule ^en/trauma-sensitive-coaching/?$ /en/trauma-informed-coaching/ [R=301,L]
+
 ExpiresActive On
 ExpiresByType font/woff2  "access plus 1 year"
 ExpiresByType image/* "access plus 4 months"
