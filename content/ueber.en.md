@@ -5,7 +5,7 @@ images: ["images/social/see.jpg"]
 menus:
  main:
   weight: 10
-# _„A good therapist will look like a Jungian, a Freudian, a dancer, a storyteller, a shaman, an analyst, a teacher or an idiot, depending on the situation.“ -- Dr. Arnold Mindell_
+# _„A good therapist will look like a Jungian, a Freudian, a dancer, a storyteller, a shaman, an analyst, a teacher or an idiot, depending on the situation.“ — Dr. Arnold Mindell_
 ---
 
 ![](/images/see.jpg)
@@ -16,7 +16,7 @@ menus:
 * Identity-oriented Psychotrauma Theory and work with the intention method (IoPT)
 * [accompanying you as you meet your inner parts]({{< ref "traumasensibles-coaching.md" >}}) (ego states, inner family)
 * Process and Embodiment focused Psychology (PEP®)
-* structural and organisational [constellations]({{< ref "gruppen/freie-aufstellungen.md" >}}) 
+* structural and organizational [constellations]({{< ref "gruppen/freie-aufstellungen.md" >}}) 
 * [guided body awareness]({{< ref "koerperspueren.md" >}}) and craniosacral self-treatments
  
 --- 

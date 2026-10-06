@@ -8,7 +8,7 @@ images: ["images/social/blumen.jpg"]
 
 # Trauma-Sensitive Coaching with Ego States
 
-Verena König explains why assistance beyond the clinical setting is needed—and what that entails. She writes in German; the English rendering below is mine and is not an authorised translation.
+Verena König explains why assistance beyond the clinical setting is needed — and what that entails. She writes in German; the English rendering below is mine and is not an authorized translation.
 
 _“A large number of people affected by early trauma suffer from a wide range of difficulties that for a long time are not recognized as symptoms resulting from trauma. These symptoms vary widely, ranging from problems with self-esteem and attachment to health issues, anxiety, and depression. Many people turn to other forms of support before seeking therapy, and even when they do seek therapy, they face long waiting times or are unable to secure a place in therapy. More readily available sources of support may be accessed via counseling or coaching, self-help groups, or personal development programs. These settings — and often therapeutic settings as well — are often ill-equipped to deal with trauma. As a consequence, many people affected by early and complex trauma embark on a years-long odyssey in search of healing, or at least relief from their symptoms. Without trauma-specific support, however, this search cannot succeed._
 
@@ -28,4 +28,4 @@ im nichttherapeutischen Setting implementieren können"* in: *Ego-State-Therapie
 
 ---
 
-[My accompaniment is not a substitute for medical or psychotherapeutic treatment]({{< ref "heilpraktiker.md" >}}). How I work is set out in the [principles of my practice]({{< ref "arbeitsweise.md" >}}).
+[My services are not a substitute for treatment from a doctor or psychotherapist]({{< ref "heilpraktiker.md" >}}). How I work is set out in the [principles of my practice]({{< ref "arbeitsweise.md" >}}).

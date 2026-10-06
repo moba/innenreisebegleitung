@@ -49,7 +49,7 @@ menus:
  * Trauma-informed Nonviolent Communication – theory and practice (A. Scheuringer, L. Hammerschmied, St. Florian)
  * CNVC International Intensive Training in Nonviolent Communication (Denmark)
  * Restorative Circles workshop (H. Hartenberg, Munich)
- * Hypnosystemic grief counselling (R. Kachler, Nuremberg/Munich)
+ * Hypnosystemic grief counseling (R. Kachler, Nuremberg/Munich)
  * MHFA Mental Health First Aid responder training
  * Basic qualification in psychotraumatology (GPTG)
  * Freedom from shame and guilt with the NARM™ approach (A. Doerne, Blumenthal)

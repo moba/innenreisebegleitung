@@ -36,4 +36,4 @@ Getting to know each other and the first session are free of charge. Everything 
 
 [Why I am not a Heilpraktiker or psychotherapist.]({{< ref "heilpraktiker.md" >}})
 
-_»A good therapist will look like a Jungian, Freudian, dancer, storyteller, shaman, analyst, teacher, or idiot, depending upon the situation.« -- Dr. Arnold Mindell_
+_»A good therapist will look like a Jungian, Freudian, dancer, storyteller, shaman, analyst, teacher, or idiot, depending upon the situation.« — Dr. Arnold Mindell_

@@ -32,7 +32,7 @@ We both look after ourselves, and after each other. This is not a trade and not 
 
 ## Choice
 
-You decide. About the pace, about the direction, about every touch (in case you want to work with touch!). That takes enough time to even notice what you want -- which is why we go slowly.
+You decide. About the pace, about the direction, about every touch (in case you want to work with touch!). That takes enough time to even notice what you want — which is why we go slowly.
 
 'No' is a complete answer. 'Maybe' or 'I don't know' are too. A no is as welcome to me as a yes, and often more important: many of us learned as children that our no did not count. That it counts here is part of the work.
 
@@ -44,11 +44,11 @@ Processing happens during the pauses, not while I’m doing something.
 
 ## Self care
 
-Eating, drinking, sleeping, going to the toilet, fresh air. That sounds trivial and it is not: someone who is hungry, thirsty or short of sleep cannot process anything. Say when you need something. I look after myself during the session too -- that is part of it.
+Eating, drinking, sleeping, going to the toilet, fresh air. That sounds trivial and it is not: someone who is hungry, thirsty or short of sleep cannot process anything. Say when you need something. I look after myself during the session too — that is part of it.
 
 ## Brief, frequent eye contact
 
-Glancing over now and then to see whether the other person is still there. Not staring. If we go a while without looking at each other, the distance grows and we start inventing stories about one another -- usually old ones.
+Glancing over now and then to see whether the other person is still there. Not staring. If we go a while without looking at each other, the distance grows and we start inventing stories about one another — usually old ones.
 
 At the same time, eye contact can be too much. Then we leave it out and find something else.
 
@@ -78,7 +78,7 @@ The second part comes from biodynamic craniosacral work, and from what Charles R
 
 **"Touch", not "therapy".** The word therapy assumes there is a problem for someone to find and fix. See also: [Why I am not a *Heilpraktiker* or psychotherapist]({{< ref "heilpraktiker.md" >}}).
 
-I invite you to give it a try. Literally -- the first session is free of charge.
+I invite you to give it a try. Literally — the first session is free of charge.
 
 ---
 

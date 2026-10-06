@@ -27,11 +27,11 @@ The frame comes from Franz Ruppert's Identity-oriented Psychotrauma Theory, the 
 
 Whoever brings something meets not a family system but their own intention, and whatever hangs from it.
 
-## A growing stock of suggestions, not a programme
+## A growing stock of suggestions, not a program
 
 A collection of forms from very different traditions that I have come across over the years.
 
-The stock is not a menu I choose from. Nobody is assigned a form. They are there as suggestions. Whoever brings something decides whether one of these forms fits or whether it goes without – and can turn it into something else halfway through. Precisely this trying out is what the group is for. I would not presume to claim expertise in any of these formats.
+The stock is not a menu I choose from. Nobody is assigned a form. They are there as suggestions. Whoever brings something decides whether one of these forms fits or whether it goes without — and can turn it into something else halfway through. Precisely this trying out is what the group is for. I would not presume to claim expertise in any of these formats.
 
 Examples:
 
@@ -45,17 +45,17 @@ Examples:
 
 **Ego and heart.** Two positions, nothing more needed.
 
-**Goals.** What is to be reached gets a place – and beside it the resources that are already there, waiting to be discovered.
+**Goals.** What is to be reached gets a place — and beside it the resources that are already there, waiting to be discovered.
 
 **Fundamental needs.** After Manfred Max-Neef: subsistence, protection, affection, understanding, participation, idleness, creation, identity, freedom, transcendence. Ten needs that cannot be traded off against each other.
 
 **Public matters.** Constellations on political and social questions.
 
-**Origin and love.** The moment of conception: what matters from the past. Love constellated not as a feeling between two people but far outside, as a force of its own. And the theme of boundaries: me, the others – and a place in between.
+**Origin and love.** The moment of conception: what matters from the past. Love constellated not as a feeling between two people but far outside, as a force of its own. And the theme of boundaries: me, the others — and a place in between.
 
 **A love story from one's own family.** Told in pairs, then constellated. For instance: the self, the one who loves, the one who is loved. Or: mother, father, love. Or: the two sides of the family, and love.
 
-**Decisions and opposites.** The tetralemma: the one, the other, both, neither – and then "none of this, and not even that". Plus a place for the focus, meaning the person themselves. The four positions are not there for weighing up; the jump between them makes room for what lay outside the question until now.
+**Decisions and opposites.** The tetralemma: the one, the other, both, neither — and then "none of this, and not even that". Plus a place for the focus, meaning the person themselves. The four positions are not there for weighing up; the jump between them makes room for what lay outside the question until now.
 
 **The wish to change.** Me as I am now. Me as I would like to be (or think I have to be). The qualities I would need less of to get there. The ones I would need more of.
 
@@ -73,7 +73,7 @@ Roughly like this, or else entirely differently, and open to change as soon as t
 
 **Becoming quiet.** A few minutes in which nothing is said.
 
-**Constellating.** Whoever brought something chooses the resonance givers themselves and says what they stand for – or has them chosen for them. Then it goes quiet, and it takes a while before anything comes. That silence is to be borne.
+**Constellating.** Whoever brought something chooses the resonance givers themselves and says what they stand for — or has them chosen for them. Then it goes quiet, and it takes a while before anything comes. That silence is to be borne.
 
 **Sensing into yourself.** Participants, observers, anyone assisting, the person who brought it: everyone attends to their own bodily perception, and keeps returning to themselves.
 
@@ -91,7 +91,7 @@ Afterwards there is room for the questions one usually carries around alone: wha
 
 ## Who it is for
 
-You need no training. Someone who has never constellated is as welcome as someone who has been leading groups for years – being a resonance giver takes nothing more than being there and perceiving.
+You need no training. Someone who has never constellated is as welcome as someone who has been leading groups for years — being a resonance giver takes nothing more than being there and perceiving.
 
 What it takes is a willingness not to know. Especially if you already know the format.
 
@@ -117,7 +117,7 @@ Most of the following is available in German only.
 
 [Franz Ruppert: Identity-oriented Psychotrauma Theory and Therapy (IoPT)](https://www.franz-ruppert.de/)
 
-[Matthias Varga von Kibéd, Insa Sparrer: Ganz im Gegenteil. Tetralemma work and other basic forms of Systemic Structural Constellations](https://www.syst.info/en) – see also the entry on the [tetralemma in the Systemisches Lexikon](https://www.carl-auer.de/magazin/systemisches-lexikon/tetralemma)
+[Matthias Varga von Kibéd, Insa Sparrer: Ganz im Gegenteil. Tetralemma work and other basic forms of Systemic Structural Constellations](https://www.syst.info/en) — see also the entry on the [tetralemma in the Systemisches Lexikon](https://www.carl-auer.de/magazin/systemisches-lexikon/tetralemma)
 
 [Gabriela von Witzleben: Herz – Kopf – Bauch. Triadisches Prinzip (PDF)](https://www.coaching-im-business.de/wp-content/uploads/2022/02/Methode-Herz-Kopf-Bauch-%E2%80%93-Triadisches-Prinzip-Kurzanleitung.pdf)
 
@@ -125,7 +125,7 @@ Most of the following is available in German only.
 
 [Siegfried Essen: Autopoietische Aufstellungsarbeit (PDF)](https://apsys.org/wp-content/uploads/2014/05/SE-Autopoiet-Aufst-Arb.pdf)
 
-[Christa Renoldner: Politische Aufstellungen und Grundbedürfnisaufstellung nach Max-Neef (PDF)](https://www.praxis-der-systemaufstellung.de/wp-content/uploads/simple-file-list/printarchiv/1-12/PRAXIS-1_2012-Renoldner-Christa_Politische-Aufstellungen-Ueberblick-Grundbeduerfnisaufstellung.pdf) – on the needs themselves, [Manfred Max-Neef](https://en.wikipedia.org/wiki/Manfred_Max-Neef)
+[Christa Renoldner: Politische Aufstellungen und Grundbedürfnisaufstellung nach Max-Neef (PDF)](https://www.praxis-der-systemaufstellung.de/wp-content/uploads/simple-file-list/printarchiv/1-12/PRAXIS-1_2012-Renoldner-Christa_Politische-Aufstellungen-Ueberblick-Grundbeduerfnisaufstellung.pdf) — on the needs themselves, [Manfred Max-Neef](https://en.wikipedia.org/wiki/Manfred_Max-Neef)
 
 [Christl Lieben, Vienna](https://christl-lieben.com/)
 

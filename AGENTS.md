@@ -58,6 +58,14 @@ endlos. Näheres im Kopf der Datei.
   Deutsch liegt unter `/`, Englisch unter `/en/`.
 * Eine Inhaltsänderung an der deutschen Fassung ist erst fertig, wenn die
   englische nachgezogen ist -- die beiden laufen leicht auseinander.
+* Die englischen Fassungen folgen amerikanischer Rechtschreibung
+  (*practice*, *license*, *recognized*, *organizational*, *program*,
+  *counseling*) und setzen als Gedankenstrich den Geviertstrich mit
+  Leerzeichen (` — `), nicht ` – ` oder ` -- `. Ausgenommen sind wörtliche
+  Zitate und Titel: britische Schreibweisen und Striche in Zitaten,
+  Buch-, Kurs- und Veranstaltungstiteln bleiben, wie sie in der Quelle
+  stehen. Die deutschen Fassungen behalten ihre eigene Zeichensetzung
+  (`„…“`, `»…«`, Halbgeviertstrich).
 * Menüeinträge stehen pro Seite im Front Matter (`menus.main.weight`), es gibt
   keine automatische Menüerzeugung.
 * Die E-Mail-Adresse steht nie im Inhalt, sondern kommt über den Shortcode

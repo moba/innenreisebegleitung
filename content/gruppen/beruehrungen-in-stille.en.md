@@ -11,7 +11,7 @@ images: ["images/social/wurzelkinder.jpg"]
 
 # Touches in Stillness
 
-Some things cannot be practised alone. Being there, for instance, without doing anything. For that you need someone sitting across from you.
+Some things cannot be practiced alone. Being there, for instance, without doing anything. For that you need someone sitting across from you.
 
 In this group, this is what we explore together. Not a course where one person stands at the front and the others learn. A group where we take turns giving and receiving, and where nobody knows more than anyone else.
 
@@ -33,7 +33,7 @@ Boxhall describes the course of a day in his book. Roughly like this is how I im
 
 **Speaking.** Then there is time for whatever is present: a question, a thought, something from one's own life. With Boxhall the teacher spoke at this point. With us, whoever has brought something speaks.
 
-**Break.** There are many of them. They are not incidental. They give room for whatever has come up to settle -- and an opportunity to eat cake. Breaks are also where a subject changes, when it needs to.
+**Break.** There are many of them. They are not incidental. They give room for whatever has come up to settle — and an opportunity to eat cake. Breaks are also where a subject changes, when it needs to.
 
 **In pairs, about an hour.** One person lies down, the other sits or stands alongside and rests their hands on them. Both fully clothed. The touch is very light, the contact as gentle as possible. Some like the head, others prefer the feet, others simply a hand on the chest or the back. It does not much matter: to touch one place is to touch the whole.
 
@@ -60,15 +60,15 @@ Boxhall gives a few pointers for it. Here in my own words:
 3. Sit down beside them.
 4. Take the time to arrive yourself. Can you feel the chair, your feet, your hands?
 5. Only then the touch, wherever it feels right for both of you. If no touch is wanted, that too is a contact.
-6. And then: nothing. Take in whatever comes -- without comment, including the silent one in your own head. Do not assess it. Do not interpret it. Do not try to know what it means.
+6. And then: nothing. Take in whatever comes — without comment, including the silent one in your own head. Do not assess it. Do not interpret it. Do not try to know what it means.
 7. Thoughts, images and explanations will come up. If you follow them, that is where you will stay.
-8. If you stay open, returning again and again to simply sensing the inside of your own body, there comes a point where something settles. Then the work is done -- for today, at least.
+8. If you stay open, returning again and again to simply sensing the inside of your own body, there comes a point where something settles. Then the work is done — for today, at least.
 
 Not: "How can I help this person?" But: becoming still, and then going over. Without any additional intention.
 
 Charles Ridley, who has worked and taught this way for over forty years, begins at exactly this point. He thinks little of establishing something about the other person in order to then put it right. For him what matters is not *what* someone does with their hands, but the state they are in while doing it. There is nothing to assess and nothing to apply.
 
-Hence the eighth point above. Back again and again to the inside of your own body -- not to find something in the other person, but to become still enough yourself that there is room.
+Hence the eighth point above. Back again and again to the inside of your own body — not to find something in the other person, but to become still enough yourself that there is room.
 
 ## Who it is for
 
@@ -86,7 +86,7 @@ If you would like to be part of it, [get in touch]({{< ref "kontakt.md" >}}). Yo
 
 ---
 
-_»The flowers bloom. The flowers wither. The seeds fall. The end is the beginning. Let us greet today.« -- Mike Boxhall_
+_»The flowers bloom. The flowers wither. The seeds fall. The end is the beginning. Let us greet today.« — Mike Boxhall_
 
 [Mike Boxhall: The Empty Chair. The Teaching not the T-Shirt](https://www.stillness.co.uk/)
 
