@@ -2,10 +2,10 @@
 title: "Trauma-Informed Coaching"
 slug: "trauma-informed-coaching"
 aliases: ["/trauma-sensitive-coaching/"]
-images: ["images/social/blumen.jpg"]
+images: ["images/social/isar.jpg"]
 ---
 
-![](/images/seamless-rim-border-with-medicinal-herbs-flowering-wildflowers-leaves-and-bees-botanical-772282585.jpg)
+![](/images/isar.jpg)
 
 # Trauma-Informed Coaching with Ego States
 

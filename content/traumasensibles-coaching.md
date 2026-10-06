@@ -1,10 +1,10 @@
 ---
 title: "Traumasensibles Coaching"
 slug: "traumasensibles-coaching"
-images: ["images/social/blumen.jpg"]
+images: ["images/social/isar.jpg"]
 ---
 
-![](/images/seamless-rim-border-with-medicinal-herbs-flowering-wildflowers-leaves-and-bees-botanical-772282585.jpg)
+![](/images/isar.jpg)
 
 # Traumasensibles Coaching mit Ego-States
 
