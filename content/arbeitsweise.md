@@ -104,4 +104,17 @@ _Ich muss nicht emotional gefestigt und unerschütterlich präsent sein. Ich mus
 
 ---
 
+> # Eine einfache Einladung
+> Wenn man alle Modelle, Begriffe und Methoden abzieht, bleibt etwas sehr Einfaches:
+>
+> Ruhe. \
+> Raum. \
+> Stille. \
+> Kraft. \
+> Klarheit.
+>
+> Diese Qualitäten sind nicht zu lernen -- sie werden freigelegt.
+> 
+> -- [Oliver Berner, in: Das Innere Feld](https://www.praxisberner.de/das-innere-feld/)
+
 ![](/images/presence.jpg)

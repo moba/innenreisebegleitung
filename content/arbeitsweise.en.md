@@ -104,4 +104,18 @@ by Eugene Gendlin
 
 ---
 
+> # A simple invitation
+> 
+> Strip away all the models, the terms and the methods, and something very simple remains:
+>
+> Calm. \
+> Space. \
+> Stillness. \
+> Strength. \
+> Clarity.
+>
+> These qualities aren’t something to learn -- they’re already there, waiting to be revealed.
+>
+> — [Oliver Berner, in: *Das Innere Feld*](https://www.praxisberner.de/das-innere-feld/) (available in German only; translation mine)
+
 ![](/images/presence.jpg)
